@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>D4G</title>
+  <link rel="stylesheet" href="./build/css/darkroom.min.css">
+  <link rel="stylesheet" href="./demo/css/page.css">
+</head>
+<body>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-23657373-2', 'mattketmo.github.io');
+    ga('send', 'pageview');
+  </script>
+
+  <header id="header">
+    <div class="container">
+      <h1>D4<strong>G</strong></h1>
+    </div>
+  </header>
+
+  <div id="content">
+    <div class="container">
+      <section class="copy">
+        <figure class="image-container target">
+          <!-- You may add attribute crossOrigin="anonymous" for CORS -->
+          <img src="./demo/images/domokun.jpg" alt="DomoKun" id="target">
+        </figure>
+      </section>
+    </div>
+  </div>
+
+  <script src="./vendor/fabric.js"></script>
+  <script src="./build/js/darkroom.min.js"></script>
+
+  <script>
+    var dkrm = new Darkroom('#target', {
+      // Size options
+      minWidth: 100,
+      minHeight: 100,
+      maxWidth: 650,
+      maxHeight: 500,
+
+      plugins: {
+        //save: false,
+        crop: {
+          quickCropKey: 67, //key "c"
+          //minHeight: 50,
+          //minWidth: 50,
+          //ratio: 1
+        }
+      },
+      // init: function() {
+      //   var cropPlugin = this.getPlugin('crop');
+      //   cropPlugin.selectZone(170, 25, 300, 300);
+      //   //cropPlugin.requireFocus();
+      // }
+    });
+  </script>
+</body>
+</html>
