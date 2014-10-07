@@ -27,7 +27,7 @@
       <section class="copy">
         <figure class="image-container target">
           <!-- You may add attribute crossOrigin="anonymous" for CORS -->
-          <img src="./demo/images/domokun.jpg" alt="DomoKun" id="test-img">
+          <img src="./demo/images/domokun.jpg" alt="DomoKun" id="target">
         </figure>
       </section>
     </div>
@@ -92,30 +92,5 @@
   <script src="./lib/js/base/page.js"></script>
   <script src="./vendor/fabric.js"></script>
   <script src="./build/js/darkroom.min.js"></script>
-
-  <script>
-    var dkrm = new Darkroom('#target', {
-      // Size options
-      minWidth: 100,
-      minHeight: 100,
-      maxWidth: 800,
-      maxHeight: 500,
-
-      plugins: {
-        //save: false,
-        crop: {
-          quickCropKey: 67, //key "c"
-          //minHeight: 50,
-          //minWidth: 50,
-          //ratio: 1
-        }
-      },
-      // init: function() {
-      //   var cropPlugin = this.getPlugin('crop');
-      //   cropPlugin.selectZone(170, 25, 300, 300);
-      //   //cropPlugin.requireFocus();
-      // }
-    });
-  </script>
 </body>
 </html>
