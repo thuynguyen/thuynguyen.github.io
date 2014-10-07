@@ -9,3 +9,12 @@
 .darkroom-image-container img {
   display: none;
 }
+.canvas-container{
+  width: 100% !important;
+  .lower-canvas{
+    width: 100% !important;
+  }
+  .upper-canvas{
+    width: 100% !important;
+  }
+}
