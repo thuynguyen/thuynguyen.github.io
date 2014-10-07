@@ -51,12 +51,12 @@ module.exports = function(grunt) {
         },
         files: {
           'build/js/darkroom.min.js': [
+            'build/lib/js/base/*.js',
             'build/lib/js/darkroom.js',
-            'build/lib/js/plugins/darkroom.history.js',
-            'build/lib/js/plugins/darkroom.rotate.js',
             'build/lib/js/plugins/darkroom.crop.js',
-            'build/lib/js/plugins/darkroom.save.js',
-            'build/lib/js/**/*.js'
+            'build/lib/js/plugins/darkroom.brightness.js',
+            'build/lib/js/plugins/darkroom.saturation.js',
+            'build/lib/js/plugins/darkroom.clip.js'
           ]
         }
       }
