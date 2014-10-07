@@ -118,12 +118,11 @@ h1 {
 .image-container .image-meta a:hover .image-meta-title {
   text-decoration: underline;
 }
-
 .group-actions{
   display: none;
   position: absolute;
-  bottom: 40px;
-  height: 10em;
+  bottom: 75px;
+  height: 15em;
   background-color: grey;
   opacity: 0.5;
   /*padding: 10px;*/
@@ -141,6 +140,7 @@ h1 {
 .group-actions input[type=range]{
   width: 100%;
   display: block;
+  margin-bottom:1.5em;
 }
 .group-actions input[type=range]:focus{
   outline: none;
