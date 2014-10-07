@@ -27,12 +27,69 @@
       <section class="copy">
         <figure class="image-container target">
           <!-- You may add attribute crossOrigin="anonymous" for CORS -->
-          <img src="./demo/images/domokun.jpg" alt="DomoKun" id="target">
+          <img src="./demo/images/domokun.jpg" alt="DomoKun" id="test-img">
         </figure>
       </section>
     </div>
   </div>
 
+  <!-- <h1>Doodles by Google</h1> -->
+  <!-- <div class="canvas-wrapper">
+    <img id="test-img" src="./demo/images/test1_640.jpg">
+  </div> -->
+  <div class="filter-wrapper">
+    <div class="filter">
+      <div class="filter-name">
+        <p>brightness</p>
+      </div>
+      <div class="filter-brightness-setting filter-setting">
+        <input type="range" data-filter="brightness" value="0" step="1" max="100" min="-100">
+        <span class="filter-value">0</span>
+      </div>
+    </div>
+    <div class="filter">
+      <div class="filter-name">
+        <p>saturation</p>
+      </div>
+      <div class="filter-saturation-setting filter-setting">
+        <input type="range" data-filter="saturation" value="0" step="1" max="100" min="-100">
+        <span class="filter-value">0</span>
+      </div>
+    </div>
+    <div class="filter">
+      <div class="filter-name">
+        <p>red</p>
+      </div>
+      <div class="filter-red-setting filter-setting">
+        <input type="range" data-filter="red" value="0" step="1" max="100" min="-100">
+        <span class="filter-value">0</span>
+      </div>
+    </div>
+    <div class="filter">
+      <div class="filter-name">
+        <p>green</p>
+      </div>
+      <div class="filter-green-setting filter-setting">
+        <input type="range" data-filter="green" value="0" step="1" max="100" min="-100">
+        <span class="filter-value">0</span>
+      </div>
+    </div>
+    <div class="filter">
+      <div class="filter-name">
+        <p>blue</p>
+      </div>
+      <div class="filter-blue-setting filter-setting">
+        <input type="range" data-filter="blue" value="0" step="1" max="100" min="-100">
+        <span class="filter-value">0</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="./lib/js/base/jquery.min.js"></script>
+  <link href="./lib/css/base/bootstrap.min.css" rel="stylesheet" >
+  <script src="./lib/js/base/underscore.js"></script>
+  <script src="./lib/js/base/caman.min.js"></script>
+  <script src="./lib/js/base/page.js"></script>
   <script src="./vendor/fabric.js"></script>
   <script src="./build/js/darkroom.min.js"></script>
 
