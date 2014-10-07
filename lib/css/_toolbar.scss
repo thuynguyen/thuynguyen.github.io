@@ -3,7 +3,7 @@
   top: -45px;
   left: 0;
   background: #444;
-  height: 40px;
+  height: 75px;
   display: block;
   z-index: 99;
   border-radius: 2px;
@@ -34,6 +34,8 @@ ul.darkroom-toolbar-actions {
 
 ul.darkroom-toolbar-actions li.darkroom-button-group {
   border-right: 1px solid #777;
+  width: 25%;
+  text-align: center;
 }
 ul.darkroom-toolbar-actions li.darkroom-button-group:last-child {
   border-right: none;
