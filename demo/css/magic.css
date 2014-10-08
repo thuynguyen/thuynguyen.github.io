@@ -1,0 +1,16 @@
+body {
+	width: 100%;
+	height: 100%;
+}
+#playground{
+  width: 100% !important;
+}
+.canvas-container{
+  width: 100% !important;
+  .lower-canvas{
+    width: 100% !important;
+  }
+  .upper-canvas{
+    width: 100% !important;
+  }
+}
