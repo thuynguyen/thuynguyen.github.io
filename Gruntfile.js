@@ -6,11 +6,11 @@ module.exports = function(grunt) {
   grunt.initConfig({
     watch: {
       scripts: {
-        files: [ 'lib/js/base/*.js','lib/js/*.js'],
+        files: [ 'public/js/base/*.js','public/js/*.js'],
         tasks: [ 'uglify:main', 'clean:scripts' ]
       },
       stylesheets: {
-        files: 'lib/css/*.scss',
+        files: 'public/css/*.scss',
         tasks: [ 'sass', 'clean:stylesheets' ]
       }
     },
@@ -42,8 +42,8 @@ module.exports = function(grunt) {
         },
         files: {
           'build/js/application.min.js': [
-            'lib/js/*/*.js',
-            'lib/js/*.js'
+            'public/js/*/*.js',
+            'public/js/*.js'
           ]
         }
       }
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
           sourcemap: true
         },
         files: {
-          'build/css/application.min.css': 'lib/css/application.scss'
+          'build/css/application.min.css': 'public/css/application.scss'
         }
       }
     },
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
 
     docco: {
       docs: {
-        src: ['lib/js/**/*.js'],
+        src: ['public/js/**/*.js'],
         options: {
           output: 'docs/'
         }
