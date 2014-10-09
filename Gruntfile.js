@@ -6,21 +6,12 @@ module.exports = function(grunt) {
   grunt.initConfig({
     watch: {
       scripts: {
-        files: 'lib/js/**/*.js',
-        tasks: [ 'copy:main', 'uglify:main', 'clean:scripts' ]
+        files: [ 'lib/js/base/*.js','lib/js/*.js'],
+        tasks: [ 'uglify:main', 'clean:scripts' ]
       },
       stylesheets: {
-        files: 'lib/css/**/*.scss',
-        tasks: [ 'copy:main', 'webfont', 'sass', 'clean:stylesheets' ]
-      }
-    },
-
-    copy: {
-      main: {
-        cwd: 'lib',
-        src: [ '**' ],
-        dest: 'build/lib',
-        expand: true
+        files: 'lib/css/*.scss',
+        tasks: [ 'sass', 'clean:stylesheets' ]
       }
     },
 
@@ -32,10 +23,10 @@ module.exports = function(grunt) {
         src: [ 'build/lib' ]
       },
       scripts: {
-        src: [ 'build/lib/js' ]
+        src: [ 'build/js' ]
       },
       stylesheets: {
-        src: [ 'build/lib/css' ]
+        src: [ 'build/css' ]
       },
       docco: {
         src: [ 'docs' ]
@@ -46,17 +37,13 @@ module.exports = function(grunt) {
       main: {
         options: {
           mangle: false,
-          sourceMap: 'build/js/darkroom.min.js.map',
-          sourceMappingURL: 'darkroom.min.js.map'
+          sourceMap: 'build/js/application.min.js.map',
+          sourceMappingURL: 'application.min.js.map'
         },
         files: {
-          'build/js/darkroom.min.js': [
-            'build/lib/js/base/*.js',
-            'build/lib/js/darkroom.js',
-            'build/lib/js/plugins/darkroom.crop.js',
-            'build/lib/js/plugins/darkroom.brightness.js',
-            'build/lib/js/plugins/darkroom.saturation.js',
-            'build/lib/js/plugins/darkroom.clip.js'
+          'build/js/application.min.js': [
+            'lib/js/*/*.js',
+            'lib/js/*.js'
           ]
         }
       }
@@ -69,7 +56,7 @@ module.exports = function(grunt) {
           sourcemap: true
         },
         files: {
-          'build/css/darkroom.min.css': 'build/lib/css/darkroom.scss'
+          'build/css/application.min.css': 'lib/css/application.scss'
         }
       }
     },
@@ -129,7 +116,7 @@ module.exports = function(grunt) {
   grunt.registerTask(
     'build',
     'Compiles all of the assets and copies the files to the build directory.',
-    [ 'clean:build', 'copy', 'webfont', 'sass', 'uglify:main', 'clean:lib' ]
+    [ 'clean:build', 'sass', 'uglify:main', 'clean:lib' ]
   );
 
   grunt.registerTask(

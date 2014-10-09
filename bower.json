@@ -2,9 +2,9 @@
   "name": "darkroom",
   "description": "Extensible image editing tool via HTML canvas",
   "version": "1.0.0",
-  "homepage": "http://mattketmo.github.io/darkroomjs/",
+  "homepage": "http://thuynguyen.github.io/d4g/",
   "authors": [
-    "Matthieu Moquet <matthieu@moquet.net>"
+    "FRT"
   ],
   "license": "MIT",
   "dependencies": {
