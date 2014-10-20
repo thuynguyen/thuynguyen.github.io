@@ -15,10 +15,11 @@
   //$('#startRecord').click(magic.startStopRecord)
   $('#preview').click(magic.preview)
   $('#view_text').click(magic.drawText)
+  // Init for text magic
+  textMagic.init({canvasId: 'playground',
+                finished: function() { console.log('Done')},
+                background: 'public/images/magic/sample_doodle.png',
+                text: 'Hello world'
+  })
+  $("#addTextMagic").click(textMagic.startTransform)
 })
-// $(document).on("pagecreate","#magicpage",function(){
-//   $("#magicpage").on("swipeleft",function(){
-//     alert(12);
-//     magic.addAnimation()
-//   });                       
-// });
