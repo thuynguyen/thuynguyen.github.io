@@ -4,33 +4,51 @@
   var canvas = null
   var rawCanvasCtx = null
   var isRecording = false
-  var encoder = new GIFEncoder()
-  encoder.setRepeat(0)
-  encoder.setDelay(1000/30)
   var startRecordingTime = null
   var lastDrawTime = null
+  var startAnimateTime = null
+  var lastDrawAnimateTime = null
   var animationButton = null
-
+  var worker = null
+  var duration = 2000 // ms
+  var fps = 30
+  var totalFrames = fps * duration / 1000
+  var frameTime = 1000 / 30
+  var progress = 0
+  var i = 1;
+  var imgObj = null
+  var rotateImage = null
+  var left = "Left"
+  var right = "Right"
+  var top = "Top"
+  var sprW = 60;
+  var sprH = 60;
+  var currentID = 0;
+  var frame_index = 0
+  var shuttleSprite = window.shuttleSprite["frames"]
+  var fanSprite = window.fanSprite["frames"]
+  var doveSprite = window.doveSprite["frames"]
+  var bg = null;
+  var currentDirection = "";
   magic.loadCanvas = function(canvasId) {
     rawCanvasCtx = document.getElementById(canvasId).getContext('2d')
     canvas = new fabric.Canvas(canvasId)
-
-    // document.getElementById(canvasId).height = String(window.innerHeight)+"px"
-    // document.getElementById(canvasId).width = String(window.innerWidth) +"px"
+    bg = new Image()
+    bg.src = "public/images/magic/sample_doodle1.png"
+  }
+  magic.drawText = function() {
+    ctx = canvas.getContext("2d")
+    i++;
+    ctx.strokeText($("#input_text").val(), 10, 10*i);
   }
   magic.loadBg = function() {
-    fabric.Image.fromURL("/public/images/magic/sample_doodle1.png", function(img) {
+    fabric.Image.fromURL("public/images/magic/sample_doodle1.png", function(img) {
         //img.set('top', fabric.util.getRandomInt(1, 1)).set('top', 0);
         //img.movingRight = !!Math.round(Math.random());
-
         canvas.add(img);
+        canvas.item(0).hasControls = canvas.item(0).hasBorders = false;
+        canvas.item(0).lockMovementY = canvas.item(0).lockMovementX = true; 
       });
-
-    // img = new Image();
-    // img.onload = function() {
-    //   rawCanvasCtx.drawImage(img,0,0);
-    // }
-    // img.src = "/public/images/magic/sample_doodle.jpg";
   }
   magic.loadImageFile = function(evt) {
     var tgt = evt.target || window.event.srcElement, files = tgt.files
@@ -43,7 +61,8 @@
         image.src = fr.result;
         //ctx = document.getElementById('playground').getContext('2d')
         //ctx.drawImage(image, 0, 0)
-        var imgInstance = new fabric.Image(image, {left: 0, top: 0})
+        var imgInstance = new fabric.Image(image, {left: 0, top: 0, hasBorders: false,
+       hasControls: false})
         canvas.add(imgInstance)
       }
       fr.readAsDataURL(files[0]);
@@ -53,62 +72,240 @@
       // them on the server until the user's session ends.
     }
   }
-
-  magic.addAnimation = function() {
-    var img = new Image()
-    img.src = '/public/images/magic/train.png'
-    encoder.start()
-    img.onload = function() {
-      var imgInstance = new fabric.Image(this, {left: 0, top: 0})
-      imgInstance.animate('left', 600, {
-        onChange: canvas.renderAll.bind(canvas),
-        duration: 1000,
-        //easing: fabric.util.ease.easeOutBounce
-      });
-      canvas.add(imgInstance)
+  
+  magic.startRecordInWorker = function(src, direction) {
+    worker = new Worker('public/js/magic/magicWorker.js')
+    progress = 0
+    worker.onmessage = function(event) {
+      if (event.data !== 'waiting') {
+        $("#preview").removeClass("disabled")
+        $("#preview").val("Preview")
+        localStorage.setItem('data_url', event.data)
+      } else {
+        // Waiting
+        progress += ((1.0/totalFrames) * 100)
+        $("#preview").val(progress.toFixed(2).toString() + "%")
+      }
     }
-    requestAnimationFrame(magic.recordFrame)
+    magic.addAnimation(src, direction)
+  }
+
+  magic.rotation = function (){
+         imgObj.rotate({
+            angle:0, 
+            animateTo:360, 
+            callback: magic.rotation(),
+            easing: function (x,t,b,c,d){       // t: current time, b: begInnIng value, c: change In value, d: duration
+                return c*(t/d)+b;
+            }
+         });
+      }
+
+  magic.addAlreadyAnimation = function(objObj,src_img) {
+    // For Left
+    img = new Image();
+    rotateImage = magic.sprite({
+      context: canvas.getContext("2d"),
+      width: 8286,
+      height: 328,
+      image: img,
+      numberOfFrames: 40,
+      ticksPerFrame: 4,
+      direction: right,
+      spriteSize: doveSprite.length,
+      bg: bg
+    });
+  
+  // Load sprite sheet
+    img.onload = function() {
+      magic.gameLoop()
+    }
+    img.src = "public/images/magic/dove.png";
+  }
+
+  magic.addRightAnimation = function(objObj,src_img) {
+    // For Right
+    var imgInstance = new fabric.Image(objObj, {left: 600, top: canvas.height/2 - 100})
+    imgInstance.animate('left', -600, {
+      onChange: canvas.renderAll.bind(canvas),
+      duration: 2000
+    });
+    canvas.add(imgInstance)
+  }
+
+  magic.addBottomTopAnimation = function(objObj,src_img) {
+    // For Top
+    img = new Image();
+    rotateImage = magic.sprite({
+      context: canvas.getContext("2d"),
+      width: 8286,
+      height: 328,
+      image: img,
+      numberOfFrames: 40,
+      ticksPerFrame: 4,
+      direction: top,
+      spriteSize: shuttleSprite.length,
+      bg: bg
+    });
+  
+  // Load sprite sheet
+    img.onload = function() {
+      magic.gameLoop()
+    }
+    img.src = "public/images/magic/shuttle-1.png";
+  }
+  magic.addLeftAnimation = function() {
+    img = new Image();
+    rotateImage = magic.sprite({
+      context: canvas.getContext("2d"),
+      width: 940,
+      height: 90,
+      image: img,
+      numberOfFrames: 10,
+      ticksPerFrame: 4,
+      direction: left,
+      spriteSize: fanSprite.length,
+      bg: bg
+    });
+  
+  // Load sprite sheet
+    img.onload = function() {
+      magic.gameLoop()
+    }
+    img.src =  "public/images/magic/fan.png"
+  }
+
+  magic.addAnimation = function(src_img, direction) {
+    switch (direction) {
+        case left:
+          magic.addLeftAnimation("this", src_img)
+          break;
+        case right:
+          var img = new Image()
+          img.src = src_img;
+          img.onload = function() {
+            magic.addRightAnimation(this, src_img)
+          }
+          break;
+        case top:
+          magic.addBottomTopAnimation("this", src_img)
+          break;
+        default:
+          magic.addAlreadyAnimation()
+          break;
+      }
+    window.c = canvas;
+    magic.startStopRecord()
   }
 
   magic.startStopRecord = function(e) {
-    // animationButton = $(e.currentTarget)
-    // animationButton.val('Recording')
-    
     requestAnimationFrame(magic.recordFrame)
   }
 
   magic.recordFrame = function(timestamp) {
-    console.log("abc ----------------")
+    
     if (startRecordingTime === null) {
       startRecordingTime = timestamp
     }
 
-    if ((timestamp - startRecordingTime) > 5000) {
+    if ((timestamp - startRecordingTime) > duration) {
       lastDrawTime = null
       startRecordingTime = null
-      //$(e.currentTarget).val('Start Recording')
-      encoder.finish();
-      var binary_gif = encoder.stream().getData() //notice this is different from the as3gif package!
-      var data_url = 'data:image/gif;base64,'+encode64(binary_gif);
-      localStorage.setItem("data_url", data_url)
-
-      console.log(data_url.length)
-      //animationButton.val('Start Record')
+      worker.postMessage('finished')
       return
     }
 
-    if (lastDrawTime === null || (timestamp - lastDrawTime) > 33) {
-      encoder.addFrame(canvas.contextContainer)
-      lastDrawTime = timestamp
+    if (lastDrawTime === null || (timestamp - lastDrawTime) > frameTime) {
+      var imageData = canvas.contextContainer.getImageData(0,0,canvas.width,canvas.height).data
+      worker.postMessage({
+        width: canvas.width,
+        height: canvas.height,
+        data: imageData})
+
+        lastDrawTime = timestamp
     }
     window.requestAnimationFrame(magic.recordFrame)
   }
+
   magic.preview = function() {
     window.location.href = "preview.html"
+  }
+  var for_x = 1;
+
+  magic.gameLoop = function(timestamp) {
+    for_x++;
+    //if (for_x > 300) {for_x = 0; return}
     
-    //$("#animationImage").height = window.innerHeight+"px";
-    //$("#animationImage").width = window.innerWidth+"px";
-    //localStorage.clear();
+    if (startAnimateTime === undefined) {
+      startAnimateTime = timestamp
+    }
+
+    if ((timestamp - startAnimateTime) > 10000) {
+      lastDrawAnimateTime = undefined
+      startAnimateTime = undefined
+      for_x = 0
+      return
+    }
+    
+    if (lastDrawAnimateTime === undefined || (timestamp - lastDrawAnimateTime) > frameTime) {
+      
+      rotateImage.update();
+      rotateImage.render();
+      lastDrawAnimateTime = timestamp
+    }
+    
+    console.log("timestamp==== "+timestamp)
+    window.requestAnimationFrame(magic.gameLoop);
+    
+    
+  }
+  magic.sprite = function(options) {
+    var that = {},
+      frameIndex = 0,
+      tickCount = 0,
+      ticksPerFrame = options.ticksPerFrame || 0,
+      numberOfFrames = options.numberOfFrames || 1;
+      
+      that.context = options.context;
+      that.width = options.width;
+      that.height = options.height;
+      that.direction = options.direction;
+      that.image = options.image;
+      that.spriteSize = options.spriteSize;
+      that.bg = options.bg
+      currentDirection = options.direction;
+      that.update = function () {
+         console.log("currentID in update===="+currentID)
+        if (currentID < that.spriteSize - 1 )
+          currentID ++;
+        else
+          currentID = 0;
+      };
+    
+      that.render = function () {
+        console.log("for_x "+for_x)
+        that.context.clearRect(0,0, canvas.width, canvas.height); 
+        that.context.drawImage(bg, 0, 0)
+        console.log("currentID in render===="+currentID)
+        if (that.direction == top) {
+          that.context.drawImage(that.image, shuttleSprite[currentID].frame.x, shuttleSprite[currentID].frame.y, shuttleSprite[currentID].frame.w, shuttleSprite[currentID].frame.h, 
+                                150, 300-currentID*10, shuttleSprite[currentID].frame.w, shuttleSprite[currentID].frame.h); //
+        } else if (that.direction == left) {
+            for (var i = 0; i < that.spriteSize; i++) {
+              if (currentID == parseInt(fanSprite[i].filename)) {
+                console.log("------order----"+fanSprite[i].filename)
+                that.context.drawImage(that.image, fanSprite[currentID].frame.x, fanSprite[currentID].frame.y, fanSprite[currentID].frame.w, fanSprite[currentID].frame.h, 
+                                  100,0, fanSprite[currentID].frame.w, fanSprite[currentID].frame.h);
+              }
+            }
+        } else if (that.direction == right) {
+          that.context.drawImage(that.image, doveSprite[currentID].frame.x, doveSprite[currentID].frame.y, doveSprite[currentID].frame.w, doveSprite[currentID].frame.h, 
+                            600-for_x*2, 150, doveSprite[currentID].frame.w, doveSprite[currentID].frame.h);
+        }
+        
+
+    };
+    return that;
   }
   magic.canvas = function() {
     return canvas
