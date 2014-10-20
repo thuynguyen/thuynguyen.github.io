@@ -30,13 +30,14 @@
   var doveSprite = window.doveSprite["frames"]
   var bg = null;
   var currentDirection = "";
+  var for_x = 1;
   magic.loadCanvas = function(canvasId) {
     canvas = document.getElementById(canvasId)
     rawCanvasCtx = canvas.getContext('2d')
     // canvas = new fabric.Canvas(canvasId)
     //canvas = document.getElementById(canvasId)
     bg = new Image()
-    bg.src = "public/images/magic/sample_doodle1.png"
+    bg.src = "public/images/magic/sample_doodle.png"
   }
   magic.drawText = function() {
     ctx = canvas.getContext("2d")
@@ -53,7 +54,7 @@
     //   });
     bg.src = bg.src
     bg.onload = function() {
-    rawCanvasCtx.drawImage(bg, 0,0, canvas.width, canvas.height)
+      rawCanvasCtx.drawImage(bg, 0,0, canvas.width, canvas.height)
     }
   }
   magic.loadImageFile = function(evt) {
@@ -96,17 +97,6 @@
     magic.addAnimation(src, direction)
   }
 
-  magic.rotation = function (){
-         imgObj.rotate({
-            angle:0, 
-            animateTo:360, 
-            callback: magic.rotation(),
-            easing: function (x,t,b,c,d){       // t: current time, b: begInnIng value, c: change In value, d: duration
-                return c*(t/d)+b;
-            }
-         });
-      }
-
   magic.addAlreadyAnimation = function(objObj,src_img) {
     // For Left
     img = new Image();
@@ -130,13 +120,25 @@
   }
 
   magic.addRightAnimation = function(objObj,src_img) {
-    // For Right
-    var imgInstance = new fabric.Image(objObj, {left: 600, top: canvas.height/2 - 100})
-    imgInstance.animate('left', -600, {
-      onChange: canvas.renderAll.bind(canvas),
-      duration: 2000
+    // For Train
+    img = new Image();
+    rotateImage = magic.sprite({
+      context: canvas.getContext("2d"),
+      width: 8286,
+      height: 328,
+      image: img,
+      numberOfFrames: 40,
+      ticksPerFrame: 4,
+      direction: "",
+      spriteSize: shuttleSprite.length,
+      bg: bg
     });
-    canvas.add(imgInstance)
+  
+  // Load sprite sheet
+    img.onload = function() {
+      magic.gameLoop()
+    }
+    img.src = "public/images/magic/train.png";
   }
 
   magic.addBottomTopAnimation = function(objObj,src_img) {
@@ -236,7 +238,7 @@
   magic.preview = function() {
     window.location.href = "preview.html"
   }
-  var for_x = 1;
+  
 
   magic.gameLoop = function(timestamp) {
     for_x++;
@@ -295,18 +297,21 @@
         console.log("currentID in render===="+currentID)
         if (that.direction == top) {
           that.context.drawImage(that.image, shuttleSprite[currentID].frame.x, shuttleSprite[currentID].frame.y, shuttleSprite[currentID].frame.w, shuttleSprite[currentID].frame.h, 
-                                150, 300-currentID*10, shuttleSprite[currentID].frame.w, shuttleSprite[currentID].frame.h); //
+                                50, 300-currentID*10, shuttleSprite[currentID].frame.w, shuttleSprite[currentID].frame.h); //
         } else if (that.direction == left) {
             for (var i = 0; i < that.spriteSize; i++) {
               if (currentID == parseInt(fanSprite[i].filename)) {
                 console.log("------order----"+fanSprite[i].filename)
                 that.context.drawImage(that.image, fanSprite[currentID].frame.x, fanSprite[currentID].frame.y, fanSprite[currentID].frame.w, fanSprite[currentID].frame.h, 
-                                  100,0, fanSprite[currentID].frame.w, fanSprite[currentID].frame.h);
+                                  0,0, fanSprite[currentID].frame.w, fanSprite[currentID].frame.h);
               }
             }
         } else if (that.direction == right) {
           that.context.drawImage(that.image, doveSprite[currentID].frame.x, doveSprite[currentID].frame.y, doveSprite[currentID].frame.w, doveSprite[currentID].frame.h, 
-                            600-for_x*2, 150, doveSprite[currentID].frame.w, doveSprite[currentID].frame.h);
+                            canvas.width-for_x*2, 20, doveSprite[currentID].frame.w, doveSprite[currentID].frame.h);
+        } else {
+           that.context.drawImage(that.image, 0, 0, 558, 50, 
+                                  canvas.width - for_x*10, 50, 558, 50);
         }
         
 

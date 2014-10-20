@@ -9,8 +9,8 @@
   	magic.startRecordInWorker()
   })
      
-  $('#_addLeftAnimation').click(function() {magic.startRecordInWorker("img/train.png", "Left")})
-  $('#_addRightAnimation').click(function() {magic.startRecordInWorker("img/train.png", "Right")})
+  $('#_addLeftAnimation').click(function() {magic.startRecordInWorker("public/images/magic/train.png", "Left")})
+  $('#_addRightAnimation').click(function() {magic.startRecordInWorker("public/images/magic/train.png", "Right")})
   $('#_addBottomTopAnimation').click(function() {magic.startRecordInWorker("img/space_ship.png", "Top")})
   //$('#startRecord').click(magic.startStopRecord)
   $('#preview').click(magic.preview)
