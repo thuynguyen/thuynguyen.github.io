@@ -1,0 +1,643 @@
+/* line 1, demo.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/* line 4, demo.scss */
+body {
+  padding: 0;
+  background-color: #eeeeee;
+}
+
+/* line 8, demo.scss */
+#main {
+  margin: 0 auto;
+  max-width: 100% !important;
+  position: relative;
+}
+/* line 12, demo.scss */
+#main .top-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 17, demo.scss */
+#main .grid-icon {
+  position: absolute;
+}
+/* line 20, demo.scss */
+#main .top-banner {
+  background-color: #ec3a38;
+}
+
+/* line 24, demo.scss */
+.splash-slide {
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+
+/* line 29, demo.scss */
+.slick-slider {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+  /*Categories list*/
+  /*---end---*/
+}
+/* line 34, demo.scss */
+.slick-slider .instruction-slide img {
+  width: 70%;
+  margin-right: 10%;
+}
+/* line 41, demo.scss */
+.slick-slider .categories-list .group-1, .slick-slider .categories-list .group-2 {
+  width: 100%;
+}
+/* line 43, demo.scss */
+.slick-slider .categories-list .group-1 .item, .slick-slider .categories-list .group-2 .item {
+  position: relative;
+  float: left;
+}
+/* line 46, demo.scss */
+.slick-slider .categories-list .group-1 .item img, .slick-slider .categories-list .group-2 .item img {
+  width: 100%;
+}
+/* line 49, demo.scss */
+.slick-slider .categories-list .group-1 .item .age, .slick-slider .categories-list .group-2 .item .age {
+  opacity: 0.9;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+}
+/* line 56, demo.scss */
+.slick-slider .categories-list .group-1 .item .age .quantity, .slick-slider .categories-list .group-2 .item .age .quantity {
+  float: right;
+}
+/* line 60, demo.scss */
+.slick-slider .categories-list .group-1 .item .color1, .slick-slider .categories-list .group-2 .item .color1 {
+  background-color: #e74a2f;
+}
+/* line 63, demo.scss */
+.slick-slider .categories-list .group-1 .item .color2, .slick-slider .categories-list .group-2 .item .color2 {
+  background-color: #5ab557;
+}
+/* line 66, demo.scss */
+.slick-slider .categories-list .group-1 .item .color3, .slick-slider .categories-list .group-2 .item .color3 {
+  background-color: #5496ca;
+}
+/* line 69, demo.scss */
+.slick-slider .categories-list .group-1 .item .color4, .slick-slider .categories-list .group-2 .item .color4 {
+  background-color: #fbbc0b;
+}
+/* line 76, demo.scss */
+.slick-slider .back-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 81, demo.scss */
+.slick-slider .title {
+  /*margin-left: 2.5em;*/
+}
+/* line 83, demo.scss */
+.slick-slider .title .text-wrapper {
+  float: left;
+}
+/* line 86, demo.scss */
+.slick-slider .title .get-start {
+  float: right;
+  margin-right: 2.5em;
+  margin-top: 4em;
+}
+/* line 91, demo.scss */
+.slick-slider .title .btn-red {
+  background-color: #e44330;
+  border-color: #e44330;
+}
+/* line 97, demo.scss */
+.slick-slider .title .btn-submit {
+  background-color: #e74a2f;
+  border-color: #e74a2f;
+}
+/* line 101, demo.scss */
+.slick-slider .title .btn-add-magic {
+  background-color: #49af48;
+  border-color: #49af48;
+}
+/* line 105, demo.scss */
+.slick-slider .title .btn-view-gallery {
+  background-color: #438ecc;
+  border-color: #438ecc;
+}
+/* line 109, demo.scss */
+.slick-slider .title span.g-plus {
+  float: left;
+  width: 15%;
+  border-right: 1px solid #d1442b;
+}
+/* line 113, demo.scss */
+.slick-slider .title span.g-plus img {
+  height: 1.8em;
+}
+/* line 117, demo.scss */
+.slick-slider .title span.text {
+  float: left;
+  width: 85%;
+  text-align: center;
+  margin-top: 0.2em;
+}
+/* line 123, demo.scss */
+.slick-slider .title span.text-center {
+  text-align: center;
+  margin-top: 0.2em;
+}
+
+/* line 131, demo.scss */
+.slick-slide img {
+  margin: 0 auto;
+}
+
+/* line 135, demo.scss */
+.slick-next {
+  background: url("./../../public/images/next-icon.png") no-repeat;
+  width: 27px;
+  height: 27px;
+  right: 5%;
+}
+/* line 140, demo.scss */
+.slick-next:before {
+  content: "" !important;
+}
+/* line 143, demo.scss */
+.slick-next:hover {
+  opacity: 0.5;
+  background: url("./../../public/images/next-icon.png") no-repeat;
+}
+
+/* line 148, demo.scss */
+.slick-prev {
+  background: url("./../../public/images/prev-icon.png") no-repeat;
+  width: 27px;
+  height: 27px;
+  left: 5%;
+}
+/* line 153, demo.scss */
+.slick-prev:before {
+  content: "" !important;
+}
+/* line 156, demo.scss */
+.slick-prev:hover {
+  opacity: 0.5;
+  background: url("./../../public/images/prev-icon.png") no-repeat;
+}
+
+/* line 162, demo.scss */
+.slick-dots button {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.3) inset;
+  cursor: pointer;
+  display: block;
+  height: 10px !important;
+  text-indent: -9999px;
+  width: 10px !important;
+}
+/* line 173, demo.scss */
+.slick-dots .slick-active button {
+  box-shadow: 0 0 13px #1bb5f8 inset !important;
+}
+
+/*Facebook*/
+/* line 179, demo.scss */
+.fb-share-button {
+  float: left;
+}
+
+/* line 182, demo.scss */
+.ZMConnectIcon_Text {
+  background: none !important;
+}
+
+/*Landscape*/
+@media all and (orientation: landscape) {
+  /* line 187, demo.scss */
+  #main {
+    /*Gallery*/
+    /*end*/
+    /*Home page*/
+    /*---end---*/
+  }
+  /* line 190, demo.scss */
+  #main .gallery .thumbnail-list {
+    padding: 2%;
+  }
+  /* line 192, demo.scss */
+  #main .gallery .thumbnail-list .rows {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+  /* line 195, demo.scss */
+  #main .gallery .thumbnail-list .rows .item {
+    width: 48.7%;
+    float: left;
+  }
+  /* line 198, demo.scss */
+  #main .gallery .thumbnail-list .rows .item img {
+    width: 100%;
+    height: 35vh;
+  }
+  /* line 207, demo.scss */
+  #main .top-banner {
+    background-color: #ec3a38;
+    height: 20vh;
+  }
+  /* line 211, demo.scss */
+  #main .grid-icon {
+    top: 1em;
+    right: 1em;
+  }
+  /* line 214, demo.scss */
+  #main .grid-icon img {
+    width: 60%;
+  }
+  /* line 219, demo.scss */
+  #main .top-effect img {
+    width: 45%;
+    float: left;
+    height: 42vh;
+  }
+  /* line 228, demo.scss */
+  #main .home .top-effect img {
+    width: 45%;
+    float: left;
+    height: 42vh;
+  }
+  /* line 234, demo.scss */
+  #main .home .action-group {
+    margin-top: 14% !important;
+  }
+  /* line 237, demo.scss */
+  #main .home .bottom-effect {
+    margin-top: 0%;
+  }
+  /* line 239, demo.scss */
+  #main .home .bottom-effect img {
+    width: 36% !important;
+    height: 43vh;
+  }
+  /* line 246, demo.scss */
+  #main .bottom-effect {
+    display: block;
+    text-align: right;
+  }
+  /* line 249, demo.scss */
+  #main .bottom-effect img {
+    width: 34% !important;
+    margin-right: 0 !important;
+  }
+  /* line 254, demo.scss */
+  #main .slick-slider {
+    width: 100%;
+    height: 100%;
+    /*Categories list*/
+    /*---end---*/
+  }
+  /* line 257, demo.scss */
+  #main .slick-slider .action-group {
+    margin-top: 5.9em;
+  }
+  /* line 261, demo.scss */
+  #main .slick-slider .back-icon img {
+    width: 50%;
+    margin-left: 1.2em;
+    margin-top: 0.9em;
+  }
+  /* line 267, demo.scss */
+  #main .slick-slider .instruction-slide {
+    margin-top: 7.3em;
+  }
+  /* line 269, demo.scss */
+  #main .slick-slider .instruction-slide img {
+    width: 64%;
+    margin-right: 10%;
+  }
+  /* line 274, demo.scss */
+  #main .slick-slider .instruction-text {
+    display: block;
+    padding: 1em;
+    background-color: #d5d6d7;
+  }
+  /* line 278, demo.scss */
+  #main .slick-slider .instruction-text .title {
+    font-weight: bold;
+    font-size: 14pt;
+  }
+  /* line 283, demo.scss */
+  #main .slick-slider .doodles-slider {
+    margin: 12% 0;
+    background-color: white;
+    padding: 4.5%;
+  }
+  /* line 287, demo.scss */
+  #main .slick-slider .doodles-slider img {
+    width: 100%;
+    height: 65%;
+  }
+  /* line 291, demo.scss */
+  #main .slick-slider .doodles-slider .slick-prev {
+    background: url("./../../public/images/prev-slider-icon.png") no-repeat;
+    background-size: 96% 100%;
+    width: 32px;
+    height: 28px;
+    left: 3%;
+  }
+  /* line 298, demo.scss */
+  #main .slick-slider .doodles-slider .slick-next {
+    background: url("./../../public/images/next-slider-icon.png") no-repeat;
+    background-size: 96% 100%;
+    width: 32px;
+    height: 28px;
+    right: 3%;
+  }
+  /* line 306, demo.scss */
+  #main .slick-slider .btn-red {
+    font-size: 13pt;
+    padding: 2% 2%;
+    margin: 3% 25%;
+  }
+  /* line 311, demo.scss */
+  #main .slick-slider .btn-gallery {
+    font-size: 13pt;
+    padding: 3% 3%;
+    margin: 2% 25%;
+  }
+  /* line 316, demo.scss */
+  #main .slick-slider .btn-submit {
+    font-size: 13pt;
+    padding: 2.7% 2%;
+    margin: 3% 25%;
+  }
+  /* line 321, demo.scss */
+  #main .slick-slider .btn-add-magic {
+    font-size: 13pt;
+    padding: 2.7% 2%;
+    margin: 2.9% 25%;
+  }
+  /* line 326, demo.scss */
+  #main .slick-slider .btn-view-gallery {
+    font-size: 13pt;
+    padding: 2.7% 2%;
+    margin: 2% 25%;
+  }
+  /* line 331, demo.scss */
+  #main .slick-slider .bold {
+    font-weight: bold;
+  }
+  /* line 335, demo.scss */
+  #main .slick-slider .categories-list {
+    margin: 5% 0;
+  }
+  /* line 337, demo.scss */
+  #main .slick-slider .categories-list .group-1, #main .slick-slider .categories-list .group-2 {
+    padding: 0.2em 13%;
+  }
+  /* line 339, demo.scss */
+  #main .slick-slider .categories-list .group-1 .item, #main .slick-slider .categories-list .group-2 .item {
+    width: 43.5%;
+    margin: 0.8em !important;
+  }
+  /* line 342, demo.scss */
+  #main .slick-slider .categories-list .group-1 .item .age, #main .slick-slider .categories-list .group-2 .item .age {
+    height: 1.9em;
+    padding: 0.2em 0;
+  }
+  /* line 345, demo.scss */
+  #main .slick-slider .categories-list .group-1 .item .age .ages, #main .slick-slider .categories-list .group-2 .item .age .ages {
+    margin-left: 0.2em;
+  }
+  /* line 348, demo.scss */
+  #main .slick-slider .categories-list .group-1 .item .age .quantity, #main .slick-slider .categories-list .group-2 .item .age .quantity {
+    margin-right: 0.4em;
+  }
+
+  /* line 358, demo.scss */
+  img.splash-image {
+    width: 56%;
+    height: 82vh;
+  }
+}
+/*Portrait*/
+/*@media only screen and (max-width: 767px) and (orientation: portrait){*/
+@media all and (orientation: portrait) {
+  /* line 366, demo.scss */
+  #main {
+    /*Gallery*/
+    /*---end---*/
+    /*Home page*/
+    /*---end---*/
+  }
+  /* line 369, demo.scss */
+  #main .gallery .thumbnail-list {
+    padding: 2%;
+  }
+  /* line 371, demo.scss */
+  #main .gallery .thumbnail-list .rows {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+  /* line 374, demo.scss */
+  #main .gallery .thumbnail-list .rows .item {
+    width: 48.7%;
+    float: left;
+  }
+  /* line 377, demo.scss */
+  #main .gallery .thumbnail-list .rows .item img {
+    width: 100%;
+    height: 14vh;
+  }
+  /* line 387, demo.scss */
+  #main .top-banner {
+    background-color: #ec3a38;
+    height: 11.6vh;
+  }
+  /* line 391, demo.scss */
+  #main .grid-icon {
+    top: 1em;
+    right: 1em;
+  }
+  /* line 394, demo.scss */
+  #main .grid-icon img {
+    width: 60%;
+  }
+  /* line 399, demo.scss */
+  #main .top-effect img {
+    width: 40%;
+    float: left;
+  }
+  /* line 407, demo.scss */
+  #main .home .top-effect img {
+    width: 40%;
+    float: left;
+  }
+  /* line 412, demo.scss */
+  #main .home .action-group {
+    margin-top: 23% !important;
+  }
+  /* line 415, demo.scss */
+  #main .home .bottom-effect {
+    margin-top: 6.7%;
+  }
+  /* line 417, demo.scss */
+  #main .home .bottom-effect img {
+    width: 47% !important;
+  }
+  /* line 423, demo.scss */
+  #main .bottom-effect {
+    display: block;
+    text-align: right;
+  }
+  /* line 426, demo.scss */
+  #main .bottom-effect img {
+    width: 48% !important;
+    margin-right: 0 !important;
+  }
+  /* line 431, demo.scss */
+  #main .slick-slider {
+    width: 100%;
+    height: 100%;
+    /*Slider on gallery page*/
+    /*---end---*/
+    /*Categories list*/
+    /*---end---*/
+  }
+  /* line 434, demo.scss */
+  #main .slick-slider .action-group {
+    margin-top: 5.9em;
+  }
+  /* line 438, demo.scss */
+  #main .slick-slider .back-icon img {
+    width: 50%;
+    margin-left: 1.2em;
+    margin-top: 0.9em;
+  }
+  /* line 444, demo.scss */
+  #main .slick-slider .instruction-slide {
+    margin-top: 7.3em;
+  }
+  /* line 446, demo.scss */
+  #main .slick-slider .instruction-slide img {
+    width: 77%;
+    margin-right: 8%;
+  }
+  /* line 451, demo.scss */
+  #main .slick-slider .instruction-text {
+    display: block;
+    padding: 1em;
+    background-color: #d5d6d7;
+  }
+  /* line 455, demo.scss */
+  #main .slick-slider .instruction-text .title {
+    font-weight: bold;
+    font-size: 14pt;
+  }
+  /* line 461, demo.scss */
+  #main .slick-slider .doodles-slider {
+    margin: 28.3% 0;
+    background-color: white;
+    padding: 4.5%;
+  }
+  /* line 465, demo.scss */
+  #main .slick-slider .doodles-slider img {
+    width: 100%;
+    height: 29%;
+  }
+  /* line 469, demo.scss */
+  #main .slick-slider .doodles-slider .slick-prev {
+    background: url("./../../public/images/prev-slider-icon.png") no-repeat;
+    background-size: 96% 100%;
+    width: 32px;
+    height: 28px;
+    left: 3%;
+  }
+  /* line 476, demo.scss */
+  #main .slick-slider .doodles-slider .slick-next {
+    background: url("./../../public/images/next-slider-icon.png") no-repeat;
+    background-size: 96% 100%;
+    width: 32px;
+    height: 28px;
+    right: 3%;
+  }
+  /* line 485, demo.scss */
+  #main .slick-slider .btn-red {
+    font-size: 13pt;
+    padding: 2.2% 2%;
+    margin: 6% 10%;
+  }
+  /* line 490, demo.scss */
+  #main .slick-slider .btn-gallery {
+    font-size: 13pt;
+    padding: 3.2% 3%;
+    margin: 5% 10%;
+  }
+  /* line 495, demo.scss */
+  #main .slick-slider .btn-submit {
+    font-size: 13pt;
+    padding: 3.2% 2%;
+    margin: 6% 10%;
+  }
+  /* line 500, demo.scss */
+  #main .slick-slider .btn-add-magic {
+    font-size: 13pt;
+    padding: 3.2% 2%;
+    margin: 5.9% 10%;
+  }
+  /* line 505, demo.scss */
+  #main .slick-slider .btn-view-gallery {
+    font-size: 13pt;
+    padding: 3.2% 2%;
+    margin: 5% 10%;
+  }
+  /* line 510, demo.scss */
+  #main .slick-slider .bold {
+    font-weight: bold;
+  }
+  /* line 514, demo.scss */
+  #main .slick-slider .categories-list {
+    margin-top: 20%;
+  }
+  /* line 516, demo.scss */
+  #main .slick-slider .categories-list .group-1, #main .slick-slider .categories-list .group-2 {
+    padding: 0.2em 0.5em;
+  }
+  /* line 518, demo.scss */
+  #main .slick-slider .categories-list .group-1 .item, #main .slick-slider .categories-list .group-2 .item {
+    width: 48.7%;
+  }
+  /* line 520, demo.scss */
+  #main .slick-slider .categories-list .group-1 .item .age, #main .slick-slider .categories-list .group-2 .item .age {
+    height: 1.9em;
+    padding: 0.2em 0;
+  }
+  /* line 523, demo.scss */
+  #main .slick-slider .categories-list .group-1 .item .age .ages, #main .slick-slider .categories-list .group-2 .item .age .ages {
+    margin-left: 0.2em;
+  }
+  /* line 526, demo.scss */
+  #main .slick-slider .categories-list .group-1 .item .age .quantity, #main .slick-slider .categories-list .group-2 .item .age .quantity {
+    margin-right: 0.4em;
+  }
+
+  /*Splash page*/
+  /* line 537, demo.scss */
+  img.splash-image {
+    width: 60%;
+    height: 60%;
+  }
+
+  /*---end---*/
+}

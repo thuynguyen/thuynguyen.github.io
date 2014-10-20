@@ -9,9 +9,6 @@
   <meta property="og:image" content="https://lh3.ggpht.com/G04mW_K1nRLnANH5Bn2rvMJnvag8qFGOhe-eKFLZg4lKOELLWsk5BnwUZ6JaIFuFd3-Y7110kwJpG62DA2NM5fGtfk1gqVzMkQ4JqEE" />
   <!-- end -->
   <!-- For Google Auth -->
-  <meta name="google-signin-clientid" content="257671055396-9p6i1fa990d48iqcobrq2sh2ioobs2k3.apps.googleusercontent.com" />
-  <meta name="google-signin-scope" content="https://www.googleapis.com/auth/plus.login" />
-  <meta name="google-signin-cookiepolicy" content="single_host_origin" />
   <!-- end -->
 
   <title>Doodle4Google</title>
@@ -22,10 +19,8 @@
   <script src="./public/js/base/zing.js"></script>
   <script src="./public/js/sdk.js"></script>
   <script src="./public/js/demo.js"></script>
-  <script src="https://apis.google.com/js/client:platform.js" async defer></script>
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-  <script src="https://apis.google.com/js/client:platform.js?onload=render" async defer></script>
   <link href="./public/css/base/bootstrap.min.css" rel="stylesheet" >
+  <!-- <link href="./public/css/base/jquery.mobile-1.4.4.min.css" rel="stylesheet" > -->
   <!-- <link rel="stylesheet" href="./build/css/application.min.css"> -->
   <link rel="stylesheet" href="./public/css/base/slick.css">
   <link rel="stylesheet" href="./public/css/demo.css">
@@ -42,25 +37,41 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
-  <div id="main" role="main" class="clearfix index">
+  <div id="main" role="main" class="clearfix">
     <div class="slick-slider">
-      <div>
-        <div class="splash-slide">
-          <div class="top-banner"></div>
-          <img src="../public/images/splash-screen-portrait.png" class="splash-image" />
-        </div>
-
-        <!-- <div>
-          <img id="magic-doodle" src="https://lh3.ggpht.com/G04mW_K1nRLnANH5Bn2rvMJnvag8qFGOhe-eKFLZg4lKOELLWsk5BnwUZ6JaIFuFd3-Y7110kwJpG62DA2NM5fGtfk1gqVzMkQ4JqEE" />
-          <div class="title clearfix" style="margin-top:3em">
-            <a class="fb_share" name="fb_share" title="Share to FaceBook">
-              <img src="../public/images/iOsShare.png"/>
-            </a>
-            <a class="clearfix" name="zm_share" type="icnbig" title="Chia sẻ lên Zing Me" style="float:left"></a>
-            <script src="../public/js/base/zing.js" type="text/javascript"></script>
+      <div class="gallery">
+        <div class="top-banner"></div>
+          <div class="back-icon home-icon">
+            <img src="../public/images/home-icon.png"/>
           </div>
-        </div> -->
-
+          <div class="grid-icon">
+            <img src="../public/images/thumbnail-icon.png"/>
+          </div>
+          <div class="doodles-slider">
+            <div>
+              <img src="../public/images/doodle1.gif"/>
+            </div>
+            <div>
+              <img src="../public/images/doodle2.gif"/>
+            </div>
+            <div>
+              <img src="../public/images/doodle3.gif"/>
+            </div>
+            <div>
+              <img src="../public/images/doodle4.gif"/>
+            </div>
+            <div>
+              <img src="../public/images/doodle5.gif"/>
+            </div>
+            <div>
+              <img src="../public/images/doodle6.gif"/>
+            </div>
+          </div>
+          <div class="instruction-text">
+            <p class="title">Eco-Bot: Nature's Caretaker</p>
+            <p class="text">Kristyn D. Ardrey, Home School, FL</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

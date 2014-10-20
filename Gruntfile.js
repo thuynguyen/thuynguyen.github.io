@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         tasks: [ 'uglify:main', 'clean:scripts' ]
       },
       stylesheets: {
-        files: 'public/css/*.scss',
+        files: [ 'public/css/base/*.css', 'public/css/*.scss' ],
         tasks: [ 'sass', 'clean:stylesheets' ]
       }
     },
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
         },
         files: {
           'build/js/application.min.js': [
-            'public/js/*/*.js',
+            'public/js/base/*.js',
             'public/js/*.js'
           ]
         }

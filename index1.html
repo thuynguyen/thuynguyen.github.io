@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <!-- For FB share -->
+  <meta name="viewport" content="width=device-width" />
+  <meta content="charset=utf-8">
+  <meta property="og:title" content="D4G" />
+  <meta property="og:description" content="Doodle4Google" />
+  <meta property="og:image" content="https://lh3.ggpht.com/G04mW_K1nRLnANH5Bn2rvMJnvag8qFGOhe-eKFLZg4lKOELLWsk5BnwUZ6JaIFuFd3-Y7110kwJpG62DA2NM5fGtfk1gqVzMkQ4JqEE" />
+  <!-- end -->
+  <!-- For Google Auth -->
+  <meta name="google-signin-clientid" content="257671055396-9p6i1fa990d48iqcobrq2sh2ioobs2k3.apps.googleusercontent.com" />
+  <meta name="google-signin-scope" content="https://www.googleapis.com/auth/plus.login" />
+  <meta name="google-signin-cookiepolicy" content="single_host_origin" />
+  <!-- end -->
+
+  <title>Doodle4Google</title>
+  <!-- Jquery -->
+  <script src="./public/js/base/jquery.min.js"></script>
+  <script src="./public/js/base/slick.js"></script>
+  <script src="./public/js/modernizr-2.6.2.min.js"></script>
+  <script src="./public/js/base/zing.js"></script>
+  <script src="./public/js/sdk.js"></script>
+  <script src="./public/js/demo.js"></script>
+  <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <script src="https://apis.google.com/js/client:platform.js?onload=render" async defer></script>
+  <link href="./public/css/base/bootstrap.min.css" rel="stylesheet" >
+  <!-- <link rel="stylesheet" href="./build/css/application.min.css"> -->
+  <link rel="stylesheet" href="./public/css/base/slick.css">
+  <link rel="stylesheet" href="./public/css/demo.css">
+
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1492207214362236&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <div id="main" role="main" class="clearfix">
+    <div class="slick-slider">
+      <div class="slides">
+        <div class="splash-slide">
+          <div class="top-banner"></div>
+          <img src="../public/images/splash-screen-portrait.png" class="splash-image" />
+        </div>
+
+        <div class="instruction-slide-wrapper">
+          <div class="top-banner"></div>
+          <div class="top-effect">
+            <img src="../public/images/top-effect.png"/>
+          </div>
+          <div class="grid-icon">
+            <img src="../public/images/grid-icon.png"/>
+          </div>
+          <div class="instruction-slide">
+            <img class="instruction-image" src="../public/images/InstructionScreen1.png" />
+          </div>
+          <div class="bottom-effect">
+            <img src="../public/images/bottom-effect.png"/>
+          </div>
+          <div class="instruction-text">
+            <p class="title">Upload your own Doodle</p>
+            <p class="text">Instantly capture, edit and upload Doodle. Lets prove yourself and be the best Doodle for Google.</p>
+          </div>
+        </div>
+
+        <div class="instruction-slide-wrapper">
+          <div class="top-banner"></div>
+          <div class="top-effect">
+            <img src="../public/images/top-effect.png"/>
+          </div>
+          <div class="grid-icon">
+            <img src="../public/images/grid-icon.png"/>
+          </div>
+          <div class="instruction-slide">
+            <img class="instruction-image" src="../public/images/InstructionScreen2.png" />
+          </div>
+          <div class="bottom-effect">
+            <img src="../public/images/bottom-effect.png"/>
+          </div>
+          <div class="instruction-text">
+            <p class="title">Edit your Doodle</p>
+            <p class="text">You can add animation to your Doodle.</p>
+          </div>
+        </div>
+
+        <div class="instruction-slide-wrapper">
+          <div class="top-banner"></div>
+          <div class="top-effect">
+            <img src="../public/images/top-effect.png"/>
+          </div>
+          <div class="grid-icon">
+            <img src="../public/images/grid-icon.png"/>
+          </div>
+          <div class="instruction-slide">
+            <img class="instruction-image" src="../public/images/InstructionScreen3.png" />
+          </div>
+          <div class="bottom-effect">
+            <img src="../public/images/bottom-effect.png"/>
+          </div>
+          <div class="instruction-text">
+            <p class="title">View Doodle</p>
+            <p class="text">You can look at all the beautiful Doodles of orther people.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="top-banner"></div>
+          <div class="top-effect">
+            <img src="../public/images/top-effect.png"/>
+          </div>
+          <div class="grid-icon">
+            <img src="../public/images/grid-icon.png"/>
+          </div>
+          <div class="title clearfix action-group">
+            <a class='clearfix btn btn-primary btn-red bold btn-signin' style='display:block;margin:2em;padding:1em;font-size:12pt' >
+              <span class="g-plus">
+                <img src="../public/images/g+.png"/>
+              </span>
+             <span class="text">Sign in with Google</span>
+           </a>
+           <a class='clearfix btn btn-primary btn-red bold' style='display:block;margin:2em;padding:1em;font-size:12pt' >
+              <span class="g-plus">
+                <img src="../public/images/g+.png"/>
+              </span>
+             <span class="text">Register with Google</span>
+           </a>
+            <a class='clearfix btn btn-primary btn-gallery bold' style='display:block;margin:1.8em;padding:1em;font-size:13pt' > View gallery </a>
+          </div>
+          <div class="bottom-effect">
+            <img src="../public/images/bottom-effect.png"/>
+          </div>
+        </div>
+
+        <div>
+          <div class="top-banner"></div>
+          <div class="top-effect">
+            <img src="../public/images/top-effect.png"/>
+          </div>
+          <div class="grid-icon">
+            <img src="../public/images/grid-icon.png"/>
+          </div>
+          <div class="title clearfix action-group">
+            <a class='clearfix btn btn-primary btn-submit bold' style='display:block;margin:2em;padding:1em;font-size:12pt' >
+             <span class="text-center">Submit doodle</span>
+           </a>
+           <a class='clearfix btn btn-primary btn-add-magic bold' style='display:block;margin:2em;padding:1em;font-size:12pt' >
+             <span class="text-center">Add magic</span>
+           </a>
+            <a class='clearfix btn btn-primary btn-view-gallery bold' style='display:block;margin:1.8em;padding:1em;font-size:13pt' > View gallery </a>
+          </div>
+          <div class="bottom-effect">
+            <img src="../public/images/bottom-effect.png"/>
+          </div>
+        </div>
+        <div>
+          <div class="top-banner"></div>
+          <div class="back-icon">
+            <img src="../public/images/back-icon.png"/>
+          </div>
+           <div class="grid-icon">
+            <img src="../public/images/grid-icon.png"/>
+          </div>
+          <div class="categories-list">
+            <div class="group-1 clearfix">
+              <div class="item">
+                <img src="../public/images/10-12-gallery.png"/>
+                <div class="age color1">
+                  <span class="ages">10-12</span>
+                  <span class="quantity">10</span>
+                </div>
+              </div>
+              <div class="item" style="margin-left: 0.5em">
+                <img src="../public/images/13-15-gallery.png"/>
+                <div class="age color2">
+                  <span class="ages">13-15</span>
+                  <span class="quantity">10</span>
+                </div>
+              </div>
+            </div>
+            <div class="group-2 clearfix">
+              <div class="item">
+                <img src="../public/images/16-18-gallery.png"/>
+                <div class="age color3">
+                  <span class="ages">16-18</span>
+                  <span class="quantity">10</span></div>
+              </div>
+              <div class="item" style="margin-left: 0.5em">
+                <img src="../public/images/19-21-gallery.png"/>
+                <div class="age color4">
+                  <span class="ages">19-21</span>
+                  <span class="quantity">10</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="top-banner"></div>
+          <div class="back-icon">
+            <img src="../public/images/home-icon.png"/>
+          </div>
+          <div class="grid-icon">
+            <img src="../public/images/thumbnail-icon.png"/>
+          </div>
+          <div class="doodles-slider">
+            <div>
+              <img src="../public/images/doodle.gif"/>
+            </div>
+            <div>
+              <img src="../public/images/doodle.gif"/>
+            </div>
+            <div>
+              <img src="../public/images/doodle.gif"/>
+            </div>
+          </div>
+          <div class="instruction-text">
+            <p class="title">Eco-Bot: Nature's Caretaker</p>
+            <p class="text">Kristyn D. Ardrey, Home School, FL</p>
+          </div>
+        </div>
+
+        <!-- <div>
+          <img id="magic-doodle" src="https://lh3.ggpht.com/G04mW_K1nRLnANH5Bn2rvMJnvag8qFGOhe-eKFLZg4lKOELLWsk5BnwUZ6JaIFuFd3-Y7110kwJpG62DA2NM5fGtfk1gqVzMkQ4JqEE" />
+          <div class="title clearfix" style="margin-top:3em">
+            <a class="fb_share" name="fb_share" title="Share to FaceBook">
+              <img src="../public/images/iOsShare.png"/>
+            </a>
+            <a class="clearfix" name="zm_share" type="icnbig" title="Chia sẻ lên Zing Me" style="float:left"></a>
+            <script src="../public/js/base/zing.js" type="text/javascript"></script>
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
