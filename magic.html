@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./lib/css/base/bootstrap.min.css" rel="stylesheet" >
+        <link rel="stylesheet" href="./build/css/darkroom.min.css">
+        <link rel="stylesheet" href="./demo/css/page.css">
+        <link rel="stylesheet" href="demo/css/magic.css">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <script src="./vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <!--<link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">-->
+        
+        <!-- Add your site or application content here -->
+        
+        <div id="content">
+          <div class="container" style="position:relative">
+            <section class="copy">
+              <figure class="image-container target">
+                <!-- You may add attribute crossOrigin="anonymous" for CORS -->
+                <br/>
+                <canvas id="playground" width="600px" height="300px">
+                </canvas>
+                <!-- <img src="img/fanIdle.gif" id="id_image" /> -->
+                <br/>
+                <!--input type='button' id='clearAnimation' value='Clear Animation'-->
+                <!-- <input type='text' id="input_text">
+                <input type='button' id='view_text' value='View Text'>
+                <canvas id="draw" width="600px" height="300px">-->
+              </figure>
+            </section>
+          </div>
+        </div>
+        <div style= "text-align:center">
+          <input type='button' id='_addAnimation' value='Add Dove' class="btn btn-primary">
+          <input type='button' id='_addLeftAnimation' value='Add Fan' class="btn btn-primary">
+          <input type='button' id='_addRightAnimation' value='Add Train' class="btn btn-primary">
+          <input type='button' id='_addBottomTopAnimation' value='Add Shuttle' class="btn btn-primary">
+          <input type='button' id='preview' value='Preview' class="btn btn-primary disabled">
+        </div>
+        <script src="./public/js/base/jquery.min.js"></script>
+        <script src="./vendor/fabric.js"></script>
+        <script type="text/javascript" src="./vendor/LZWEncoder.js"></script>
+        <script type="text/javascript" src="./vendor/NeuQuant.js"></script>
+        <script type="text/javascript" src="./vendor/GIFEncoder.js"></script>
+        <script type="text/javascript" src="./vendor/b64.js"></script>
+        <script src="./public/js/magic/plugins.js"></script>
+        <!--<script src="public/js/magic/magicWorker.js"></script>-->
+        <script src="./public/js/magic/shuttle_json.js"></script>
+        <script src="./public/js/magic/fan_json.js"></script>
+        <script src="./public/js/magic/dove_json.js"></script>
+        <script src="./public/js/magic/magic.js"></script>
+        <script src="./public/js/magic/main.js"></script>
+
+    </body>
+</html>
