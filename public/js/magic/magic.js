@@ -31,8 +31,10 @@
   var bg = null;
   var currentDirection = "";
   magic.loadCanvas = function(canvasId) {
-    rawCanvasCtx = document.getElementById(canvasId).getContext('2d')
-    canvas = new fabric.Canvas(canvasId)
+    canvas = document.getElementById(canvasId)
+    rawCanvasCtx = canvas.getContext('2d')
+    // canvas = new fabric.Canvas(canvasId)
+    //canvas = document.getElementById(canvasId)
     bg = new Image()
     bg.src = "public/images/magic/sample_doodle1.png"
   }
@@ -42,13 +44,17 @@
     ctx.strokeText($("#input_text").val(), 10, 10*i);
   }
   magic.loadBg = function() {
-    fabric.Image.fromURL("public/images/magic/sample_doodle1.png", function(img) {
-        //img.set('top', fabric.util.getRandomInt(1, 1)).set('top', 0);
-        //img.movingRight = !!Math.round(Math.random());
-        canvas.add(img);
-        canvas.item(0).hasControls = canvas.item(0).hasBorders = false;
-        canvas.item(0).lockMovementY = canvas.item(0).lockMovementX = true; 
-      });
+    // fabric.Image.fromURL("public/images/magic/sample_doodle1.png", function(img) {
+    //     //img.set('top', fabric.util.getRandomInt(1, 1)).set('top', 0);
+    //     //img.movingRight = !!Math.round(Math.random());
+    //     canvas.add(img);
+    //     canvas.item(0).hasControls = canvas.item(0).hasBorders = false;
+    //     canvas.item(0).lockMovementY = canvas.item(0).lockMovementX = true; 
+    //   });
+    bg.src = bg.src
+    bg.onload = function() {
+    rawCanvasCtx.drawImage(bg, 0,0, canvas.width, canvas.height)
+    }
   }
   magic.loadImageFile = function(evt) {
     var tgt = evt.target || window.event.srcElement, files = tgt.files
@@ -152,7 +158,7 @@
     img.onload = function() {
       magic.gameLoop()
     }
-    img.src = "public/images/magic/shuttle-1.png";
+    img.src = "public/images/magic/shuttle.png";
   }
   magic.addLeftAnimation = function() {
     img = new Image();
@@ -216,7 +222,7 @@
     }
 
     if (lastDrawTime === null || (timestamp - lastDrawTime) > frameTime) {
-      var imageData = canvas.contextContainer.getImageData(0,0,canvas.width,canvas.height).data
+      var imageData = rawCanvasCtx.getImageData(0,0,canvas.width,canvas.height).data
       worker.postMessage({
         width: canvas.width,
         height: canvas.height,
@@ -285,7 +291,7 @@
       that.render = function () {
         console.log("for_x "+for_x)
         that.context.clearRect(0,0, canvas.width, canvas.height); 
-        that.context.drawImage(bg, 0, 0)
+        that.context.drawImage(bg, 0, 0, canvas.width, canvas.height)
         console.log("currentID in render===="+currentID)
         if (that.direction == top) {
           that.context.drawImage(that.image, shuttleSprite[currentID].frame.x, shuttleSprite[currentID].frame.y, shuttleSprite[currentID].frame.w, shuttleSprite[currentID].frame.h, 
