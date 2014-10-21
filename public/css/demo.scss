@@ -1,5 +1,5 @@
 html, body {
-  height: 100%; width: 100%; margin: 0; 
+  height: 100%; width: 100%; margin: 0;
 }
 body{
   padding: 0;
@@ -616,4 +616,315 @@ body{
     height: 60%;
   }
   /*---end---*/
+}
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+  #main{
+    /*Gallery*/
+    .gallery{
+      .thumbnail-list{
+        padding: 2%;
+        .rows{
+          width: 100%;
+          margin-bottom: 2%;
+          .item{
+            width: 49.5%;
+            float: left;
+            img{
+              width: 100%;
+              height: 35vh;
+            }
+          }
+        }
+      }
+    }
+    /*end*/
+    .top-banner{
+      background-color: #ec3a38;
+      height: 11vh;
+    }
+    .grid-icon{
+      top: 1em;
+      right: 1em;
+      img{
+        width: 60%;
+      }
+    }
+    .top-effect{
+      img{
+        width: 80%;
+        float: left;
+        height: 26vh;
+      }
+    }
+    /*Home page*/
+    .home{
+      .top-effect{
+        img{
+          width: 80%;
+          float: left;
+          height: 26vh;
+        }
+      }
+      .action-group{
+        margin-top: 10% !important;
+      }
+      .bottom-effect{
+        margin-top: 0%;
+        img{
+          width: 34% !important;
+          height: 40vh;
+        }
+      }
+      .btn-gallery{
+        font-size: 13pt;
+        padding: 2.8% 3%;
+        margin: 2% 25%;
+      }
+    }
+    /*---end---*/
+    .bottom-effect{
+      display: block;
+      text-align: right;
+      img{
+        width: 34% !important;
+        margin-right: 0 !important;
+      }
+    }
+  }
+  /*Add magic*/
+  .add-magic{
+    .back-icon{
+      img{
+        width: 52% !important;
+        margin-left: 1.2em;
+        margin-top: 1.1em !important;
+      }
+    }
+    .canvas-wrapper{
+      margin: 10% 0;
+      background-color: white;
+      padding: 4.5%;
+      img{
+        width: 100%;
+        height: 70vh;
+      }
+    }
+    .record{
+      text-align: center;
+      img{
+        width: 8%;
+        margin-bottom: 0.5em;
+      }
+    }
+    .grid-icon{
+      right: 0 !important;
+      .text-transform{
+        display: inline;
+        width: 35% !important;
+      }
+      .voice-recog{
+        display: inline;
+        width: 21% !important;
+        margin-left: 2em;
+      }
+    }
+  }
+  /*---end---*/
+  img.splash-image{
+    width: 56%;
+    height: 82vh;
+  }
+}
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  #main{
+    /*Gallery*/
+    .gallery{
+      .thumbnail-list{
+        padding: 2%;
+        .rows{
+          width: 100%;
+          margin-bottom: 2%;
+          .item{
+            width: 49.5%;
+            float: left;
+            img{
+              width: 100%;
+              height: 14vh;
+
+            }
+          }
+        }
+      }
+    }
+    /*---end---*/
+    .top-banner{
+      background-color: #ec3a38;
+      height: 8vh;
+    }
+    .grid-icon{
+      top: 1em;
+      right: 1em;
+      img{
+        width: 60%;
+      }
+    }
+    .top-effect{
+      img{
+        width: 55%;
+        float: left;
+      }
+    }
+    /*Home page*/
+    .home{
+      .top-effect{
+        img{
+          width: 55%;
+          float: left;
+        }
+      }
+      .action-group{
+        margin-top: 15% !important;
+      }
+      .bottom-effect{
+        margin-top: 11.2%;
+        img{
+          width: 42% !important;
+        }
+      }
+    }
+    /*---end---*/
+    .bottom-effect{
+      display: block;
+      text-align: right;
+      img{
+        width: 42% !important;
+        margin-right: 0 !important;
+      }
+    }
+    .slick-slider{
+      width: 100%;
+      height: 100%;
+      .action-group{
+        margin-top: 5.9em;
+      }
+      .back-icon{
+        img{
+          width: 50%;
+          margin-left: 1.2em;
+          margin-top: 0.9em;
+        }
+      }
+      /*Slider on gallery page*/
+      .doodles-slider{
+        margin: 23% 0;
+        background-color: white;
+        padding: 4.5%;
+      }
+      /*---end---*/
+      .instruction-slide{
+        margin-top: 22%;
+      }
+      .btn-red{
+        font-size: 13pt;
+        padding: 2.25% 2%;
+        margin: 6% 10%;
+      }
+      .btn-gallery{
+        font-size: 13pt;
+        padding: 3.1% 3%;
+        margin: 5% 10%;
+      }
+      .btn-submit{
+        font-size: 13pt;
+        padding: 3% 2%;
+        margin: 6% 10%;
+      }
+      .btn-add-magic{
+        font-size: 13pt;
+        padding: 3% 2%;
+        margin: 5.9% 10%;
+      }
+      .btn-view-gallery{
+        font-size: 13pt;
+        padding: 3% 2%;
+        margin: 5% 10%;
+      }
+      .bold{
+        font-weight: bold;
+      }
+      /*Categories list*/
+      .categories-list{
+        margin-top: 7.4%;
+        .group-1, .group-2{
+          padding: 0.2em 0.5em;
+          .item{
+            width: 49.5%;
+            .age{
+              height: 10%;
+              padding: 2% 0;
+              .ages{
+                margin-left: 0.4em;
+                font-size: 16px;
+              }
+              .quantity{
+                margin-right: 0.4em;
+              }
+            }
+          }
+        }
+      }
+      /*---end---*/
+    }
+  }
+  /*Add magic*/
+  .add-magic{
+    .back-icon{
+      img{
+        width: 52% !important;
+        margin-left: 1.2em;
+        margin-top: 1.1em !important;
+      }
+    }
+    .canvas-wrapper{
+      margin: 30% 0;
+      background-color: white;
+      padding: 4.5%;
+      img{
+        width: 100%;
+        height: 65%;
+      }
+    }
+    .record{
+      text-align: center;
+      img{
+        width: 16%;
+      }
+    }
+    .grid-icon{
+      right: 0 !important;
+      .text-transform{
+        display: inline;
+        width: 35% !important;
+      }
+      .voice-recog{
+        display: inline;
+        width: 21% !important;
+        margin-left: 2em;
+      }
+    }
+  }
+  /*---end---*/
+  /*Splash page*/
+  img.splash-image{
+    width: 60%;
+    height: 60%;
+  }
 }

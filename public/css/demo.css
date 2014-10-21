@@ -728,3 +728,351 @@ body {
 
   /*---end---*/
 }
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* line 625, demo.scss */
+  #main {
+    /*Gallery*/
+    /*end*/
+    /*Home page*/
+    /*---end---*/
+  }
+  /* line 628, demo.scss */
+  #main .gallery .thumbnail-list {
+    padding: 2%;
+  }
+  /* line 630, demo.scss */
+  #main .gallery .thumbnail-list .rows {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+  /* line 633, demo.scss */
+  #main .gallery .thumbnail-list .rows .item {
+    width: 49.5%;
+    float: left;
+  }
+  /* line 636, demo.scss */
+  #main .gallery .thumbnail-list .rows .item img {
+    width: 100%;
+    height: 35vh;
+  }
+  /* line 645, demo.scss */
+  #main .top-banner {
+    background-color: #ec3a38;
+    height: 11vh;
+  }
+  /* line 649, demo.scss */
+  #main .grid-icon {
+    top: 1em;
+    right: 1em;
+  }
+  /* line 652, demo.scss */
+  #main .grid-icon img {
+    width: 60%;
+  }
+  /* line 657, demo.scss */
+  #main .top-effect img {
+    width: 80%;
+    float: left;
+    height: 26vh;
+  }
+  /* line 666, demo.scss */
+  #main .home .top-effect img {
+    width: 80%;
+    float: left;
+    height: 26vh;
+  }
+  /* line 672, demo.scss */
+  #main .home .action-group {
+    margin-top: 10% !important;
+  }
+  /* line 675, demo.scss */
+  #main .home .bottom-effect {
+    margin-top: 0%;
+  }
+  /* line 677, demo.scss */
+  #main .home .bottom-effect img {
+    width: 34% !important;
+    height: 40vh;
+  }
+  /* line 682, demo.scss */
+  #main .home .btn-gallery {
+    font-size: 13pt;
+    padding: 2.8% 3%;
+    margin: 2% 25%;
+  }
+  /* line 689, demo.scss */
+  #main .bottom-effect {
+    display: block;
+    text-align: right;
+  }
+  /* line 692, demo.scss */
+  #main .bottom-effect img {
+    width: 34% !important;
+    margin-right: 0 !important;
+  }
+
+  /*Add magic*/
+  /* line 701, demo.scss */
+  .add-magic .back-icon img {
+    width: 52% !important;
+    margin-left: 1.2em;
+    margin-top: 1.1em !important;
+  }
+  /* line 707, demo.scss */
+  .add-magic .canvas-wrapper {
+    margin: 10% 0;
+    background-color: white;
+    padding: 4.5%;
+  }
+  /* line 711, demo.scss */
+  .add-magic .canvas-wrapper img {
+    width: 100%;
+    height: 70vh;
+  }
+  /* line 716, demo.scss */
+  .add-magic .record {
+    text-align: center;
+  }
+  /* line 718, demo.scss */
+  .add-magic .record img {
+    width: 8%;
+    margin-bottom: 0.5em;
+  }
+  /* line 723, demo.scss */
+  .add-magic .grid-icon {
+    right: 0 !important;
+  }
+  /* line 725, demo.scss */
+  .add-magic .grid-icon .text-transform {
+    display: inline;
+    width: 35% !important;
+  }
+  /* line 729, demo.scss */
+  .add-magic .grid-icon .voice-recog {
+    display: inline;
+    width: 21% !important;
+    margin-left: 2em;
+  }
+
+  /*---end---*/
+  /* line 737, demo.scss */
+  img.splash-image {
+    width: 56%;
+    height: 82vh;
+  }
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* line 747, demo.scss */
+  #main {
+    /*Gallery*/
+    /*---end---*/
+    /*Home page*/
+    /*---end---*/
+  }
+  /* line 750, demo.scss */
+  #main .gallery .thumbnail-list {
+    padding: 2%;
+  }
+  /* line 752, demo.scss */
+  #main .gallery .thumbnail-list .rows {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+  /* line 755, demo.scss */
+  #main .gallery .thumbnail-list .rows .item {
+    width: 49.5%;
+    float: left;
+  }
+  /* line 758, demo.scss */
+  #main .gallery .thumbnail-list .rows .item img {
+    width: 100%;
+    height: 14vh;
+  }
+  /* line 768, demo.scss */
+  #main .top-banner {
+    background-color: #ec3a38;
+    height: 8vh;
+  }
+  /* line 772, demo.scss */
+  #main .grid-icon {
+    top: 1em;
+    right: 1em;
+  }
+  /* line 775, demo.scss */
+  #main .grid-icon img {
+    width: 60%;
+  }
+  /* line 780, demo.scss */
+  #main .top-effect img {
+    width: 55%;
+    float: left;
+  }
+  /* line 788, demo.scss */
+  #main .home .top-effect img {
+    width: 55%;
+    float: left;
+  }
+  /* line 793, demo.scss */
+  #main .home .action-group {
+    margin-top: 15% !important;
+  }
+  /* line 796, demo.scss */
+  #main .home .bottom-effect {
+    margin-top: 11.2%;
+  }
+  /* line 798, demo.scss */
+  #main .home .bottom-effect img {
+    width: 42% !important;
+  }
+  /* line 804, demo.scss */
+  #main .bottom-effect {
+    display: block;
+    text-align: right;
+  }
+  /* line 807, demo.scss */
+  #main .bottom-effect img {
+    width: 42% !important;
+    margin-right: 0 !important;
+  }
+  /* line 812, demo.scss */
+  #main .slick-slider {
+    width: 100%;
+    height: 100%;
+    /*Slider on gallery page*/
+    /*---end---*/
+    /*Categories list*/
+    /*---end---*/
+  }
+  /* line 815, demo.scss */
+  #main .slick-slider .action-group {
+    margin-top: 5.9em;
+  }
+  /* line 819, demo.scss */
+  #main .slick-slider .back-icon img {
+    width: 50%;
+    margin-left: 1.2em;
+    margin-top: 0.9em;
+  }
+  /* line 826, demo.scss */
+  #main .slick-slider .doodles-slider {
+    margin: 23% 0;
+    background-color: white;
+    padding: 4.5%;
+  }
+  /* line 832, demo.scss */
+  #main .slick-slider .instruction-slide {
+    margin-top: 22%;
+  }
+  /* line 835, demo.scss */
+  #main .slick-slider .btn-red {
+    font-size: 13pt;
+    padding: 2.25% 2%;
+    margin: 6% 10%;
+  }
+  /* line 840, demo.scss */
+  #main .slick-slider .btn-gallery {
+    font-size: 13pt;
+    padding: 3.1% 3%;
+    margin: 5% 10%;
+  }
+  /* line 845, demo.scss */
+  #main .slick-slider .btn-submit {
+    font-size: 13pt;
+    padding: 3% 2%;
+    margin: 6% 10%;
+  }
+  /* line 850, demo.scss */
+  #main .slick-slider .btn-add-magic {
+    font-size: 13pt;
+    padding: 3% 2%;
+    margin: 5.9% 10%;
+  }
+  /* line 855, demo.scss */
+  #main .slick-slider .btn-view-gallery {
+    font-size: 13pt;
+    padding: 3% 2%;
+    margin: 5% 10%;
+  }
+  /* line 860, demo.scss */
+  #main .slick-slider .bold {
+    font-weight: bold;
+  }
+  /* line 864, demo.scss */
+  #main .slick-slider .categories-list {
+    margin-top: 7.4%;
+  }
+  /* line 866, demo.scss */
+  #main .slick-slider .categories-list .group-1, #main .slick-slider .categories-list .group-2 {
+    padding: 0.2em 0.5em;
+  }
+  /* line 868, demo.scss */
+  #main .slick-slider .categories-list .group-1 .item, #main .slick-slider .categories-list .group-2 .item {
+    width: 49.5%;
+  }
+  /* line 870, demo.scss */
+  #main .slick-slider .categories-list .group-1 .item .age, #main .slick-slider .categories-list .group-2 .item .age {
+    height: 10%;
+    padding: 2% 0;
+  }
+  /* line 873, demo.scss */
+  #main .slick-slider .categories-list .group-1 .item .age .ages, #main .slick-slider .categories-list .group-2 .item .age .ages {
+    margin-left: 0.4em;
+    font-size: 16px;
+  }
+  /* line 877, demo.scss */
+  #main .slick-slider .categories-list .group-1 .item .age .quantity, #main .slick-slider .categories-list .group-2 .item .age .quantity {
+    margin-right: 0.4em;
+  }
+
+  /*Add magic*/
+  /* line 890, demo.scss */
+  .add-magic .back-icon img {
+    width: 52% !important;
+    margin-left: 1.2em;
+    margin-top: 1.1em !important;
+  }
+  /* line 896, demo.scss */
+  .add-magic .canvas-wrapper {
+    margin: 30% 0;
+    background-color: white;
+    padding: 4.5%;
+  }
+  /* line 900, demo.scss */
+  .add-magic .canvas-wrapper img {
+    width: 100%;
+    height: 65%;
+  }
+  /* line 905, demo.scss */
+  .add-magic .record {
+    text-align: center;
+  }
+  /* line 907, demo.scss */
+  .add-magic .record img {
+    width: 16%;
+  }
+  /* line 911, demo.scss */
+  .add-magic .grid-icon {
+    right: 0 !important;
+  }
+  /* line 913, demo.scss */
+  .add-magic .grid-icon .text-transform {
+    display: inline;
+    width: 35% !important;
+  }
+  /* line 917, demo.scss */
+  .add-magic .grid-icon .voice-recog {
+    display: inline;
+    width: 21% !important;
+    margin-left: 2em;
+  }
+
+  /*---end---*/
+  /*Splash page*/
+  /* line 926, demo.scss */
+  img.splash-image {
+    width: 60%;
+    height: 60%;
+  }
+}
