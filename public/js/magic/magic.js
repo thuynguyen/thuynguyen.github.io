@@ -50,8 +50,8 @@
     //   });
     bg.src = bg.src
     bg.onload = function() {
-      rawCanvasCtx.drawImage(bg, 0,0)
-      // rawCanvasCtx.canvas.width  = window.innerWidth;
+      rawCanvasCtx.drawImage(bg, 100, 100)
+      //rawCanvasCtx.canvas.width  = window.innerWidth-35;
       // rawCanvasCtx.canvas.height = window.innerHeight;
     }
   }
@@ -95,7 +95,7 @@
     magic.addAnimation(src, direction)
   }
 
-  magic.addAlreadyAnimation = function(objObj,src_img) {
+  magic.addAlreadyAnimation = function() {
     // For Left
     img = new Image();
     rotateImage = magic.sprite({
@@ -117,7 +117,7 @@
     img.src = "public/images/magic/dove.png";
   }
 
-  magic.addRightAnimation = function(objObj,src_img) {
+  magic.addRightAnimation = function() {
     // For Train
     img = new Image();
     rotateImage = magic.sprite({
@@ -139,7 +139,7 @@
     img.src = "public/images/magic/train.png";
   }
 
-  magic.addBottomTopAnimation = function(objObj,src_img) {
+  magic.addBottomTopAnimation = function() {
     // For Top
     img = new Image();
     rotateImage = magic.sprite({
@@ -184,24 +184,20 @@
   magic.addAnimation = function(src_img, direction) {
     switch (direction) {
         case left:
-          magic.addLeftAnimation("this", src_img)
+          magic.addLeftAnimation()
           break;
         case right:
-          var img = new Image()
-          img.src = src_img;
-          img.onload = function() {
-            magic.addRightAnimation(this, src_img)
-          }
+          magic.addRightAnimation()
           break;
         case top:
-          magic.addBottomTopAnimation("this", src_img)
+          magic.addBottomTopAnimation()
           break;
         default:
           magic.addAlreadyAnimation()
           break;
       }
     window.c = canvas;
-    magic.startStopRecord()
+    //magic.startStopRecord()
   }
 
   magic.startStopRecord = function(e) {
@@ -316,6 +312,7 @@
     };
     return that;
   }
+ 
   magic.canvas = function() {
     return canvas
   }
