@@ -196,7 +196,7 @@ body{
           width: 100%;
           margin-bottom: 2%;
           .item{
-            width: 48.7%;
+            width: 49%;
             float: left;
             img{
               width: 100%;
@@ -209,29 +209,32 @@ body{
     /*end*/
     .top-banner{
       background-color: #ec3a38;
-      height: 20vh;
+      height: 4em;
     }
     .grid-icon{
       top: 1em;
       right: 1em;
       img{
-        width: 60%;
+        width: 0.55em;
+      }
+      .img-thumb{
+        width: 1.8em;
       }
     }
     .top-effect{
       img{
-        width: 45%;
+        width: 11em;
         float: left;
-        height: 42vh;
+        height: 9.5em;
       }
     }
     /*Home page*/
     .home{
       .top-effect{
         img{
-          width: 45%;
+          width: 11em;
           float: left;
-          height: 42vh;
+          height: 9.5em;
         }
       }
       .action-group{
@@ -262,7 +265,7 @@ body{
       }
       .back-icon{
         img{
-          width: 50%;
+          width: 2.1em;
           margin-left: 1.2em;
           margin-top: 0.9em;
         }
@@ -289,7 +292,7 @@ body{
         padding: 4.5%;
         img{
           width: 100%;
-          height: 65%;
+          height: 14em;
         }
         .slick-prev {
           background: url("./../../public/images/prev-slider-icon.png") no-repeat;
@@ -313,7 +316,7 @@ body{
       }
       .btn-gallery{
         font-size: 13pt;
-        padding: 3% 3%;
+        padding: 2.7% 3%;
         margin: 2% 25%;
       }
       .btn-submit{
@@ -428,18 +431,21 @@ body{
     /*---end---*/
     .top-banner{
       background-color: #ec3a38;
-      height: 11.6vh;
+      height: 4em;
     }
     .grid-icon{
       top: 1em;
       right: 1em;
       img{
-        width: 60%;
+        width: 0.55em;
+      }
+      .img-thumb{
+        width: 1.8em;
       }
     }
     .top-effect{
       img{
-        width: 40%;
+        width: 9.5em;
         float: left;
       }
     }
@@ -447,7 +453,7 @@ body{
     .home{
       .top-effect{
         img{
-          width: 40%;
+          width: 9.5em;
           float: left;
         }
       }
@@ -478,7 +484,7 @@ body{
       }
       .back-icon{
         img{
-          width: 50%;
+          width: 2.1em;
           margin-left: 1.2em;
           margin-top: 0.9em;
         }
@@ -506,7 +512,7 @@ body{
         padding: 4.5%;
         img{
           width: 100%;
-          height: 29%;
+          height: 12em;
         }
         .slick-prev {
           background: url("./../../public/images/prev-slider-icon.png") no-repeat;
@@ -647,20 +653,20 @@ and (orientation : landscape) {
     /*end*/
     .top-banner{
       background-color: #ec3a38;
-      height: 11vh;
+      height: 4em;
     }
     .grid-icon{
       top: 1em;
       right: 1em;
       img{
-        width: 60%;
+        width: 0.55em;
       }
     }
     .top-effect{
       img{
         width: 80%;
         float: left;
-        height: 26vh;
+        height: 9.5em;
       }
     }
     /*Home page*/
@@ -669,7 +675,7 @@ and (orientation : landscape) {
         img{
           width: 80%;
           float: left;
-          height: 26vh;
+          height: 9.5em;
         }
       }
       .action-group{
@@ -770,13 +776,13 @@ and (orientation : portrait) {
     /*---end---*/
     .top-banner{
       background-color: #ec3a38;
-      height: 8vh;
+      height: 4em;
     }
     .grid-icon{
       top: 1em;
       right: 1em;
       img{
-        width: 60%;
+        width: 0.55em;
       }
     }
     .top-effect{

@@ -25,7 +25,6 @@ D4G.prototype.initSlick = function() {
         setTimeout(function(){
           document.location = "/home.html";
         }, 3000);
-      }else{
       }
     }
   });
