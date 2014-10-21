@@ -42,4 +42,10 @@
   $("#close-keyboard").click(function(e){
     return fase;
   })
+  // textMagic.init({canvasId: 'playground',
+  //               finished: function() { console.log('Done')},
+  //               background: 'public/images/doodle1.gif',
+  //               text: 'Hello world'
+  // })
+  // $("#addTextMagic").click(textMagic.startTransform)
 })

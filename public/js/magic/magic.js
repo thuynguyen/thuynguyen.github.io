@@ -50,7 +50,7 @@
     //   });
     bg.src = bg.src
     bg.onload = function() {
-      rawCanvasCtx.drawImage(bg, 100, 100)
+      rawCanvasCtx.drawImage(bg, 0, 0, canvas.width, canvas.height)
       //rawCanvasCtx.canvas.width  = window.innerWidth-35;
       // rawCanvasCtx.canvas.height = window.innerHeight;
     }
@@ -237,15 +237,16 @@
   magic.gameLoop = function(timestamp) {
     for_x++;
     //if (for_x > 300) {for_x = 0; return}
-    
+   
     if (startAnimateTime === undefined) {
       startAnimateTime = timestamp
     }
 
-    if ((timestamp - startAnimateTime) > 20000) {
+    if ((timestamp - startAnimateTime) > 10000) {
       lastDrawAnimateTime = undefined
       startAnimateTime = undefined
       for_x = 0
+      rawCanvasCtx.drawImage(bg, 0, 0, canvas.width, canvas.height)
       return
     }
     
@@ -297,7 +298,7 @@
               if (currentID == parseInt(fanSprite[i].filename)) {
                 console.log("------order----"+fanSprite[i].filename)
                 that.context.drawImage(that.image, fanSprite[currentID].frame.x, fanSprite[currentID].frame.y, fanSprite[currentID].frame.w, fanSprite[currentID].frame.h, 
-                                  canvas.width/2-200,50, fanSprite[currentID].frame.w, fanSprite[currentID].frame.h);
+                                  canvas.width/2-200,0, fanSprite[currentID].frame.w, fanSprite[currentID].frame.h);
               }
             }
         } else if (that.direction == right) {
