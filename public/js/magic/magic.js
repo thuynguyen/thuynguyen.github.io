@@ -37,7 +37,7 @@
     // canvas = new fabric.Canvas(canvasId)
     //canvas = document.getElementById(canvasId)
     bg = new Image()
-    bg.src = "public/images/doodle1.gif"
+    bg.src = "public/images/doodle.gif"
   }
   
   magic.loadBg = function() {
@@ -314,6 +314,15 @@
 
     };
     return that;
+  }
+
+  magic.respondCanvas = function(){
+    var container = $(canvas).parent().parent();
+    canvas.width =  $(container).width()  //max width
+    canvas.height = $(container).height()  //max height
+    //Call a function to redraw other content (texts, images etc)
+    bg.src = bg.src
+    canvas.getContext("2d").drawImage(bg, 0, 0, canvas.width, canvas.height)
   }
  
   magic.canvas = function() {

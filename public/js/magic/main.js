@@ -47,3 +47,4 @@
   })
   $("#addTextMagic").click(textMagic.startTransform)
 });
+$(window).resize( magic.respondCanvas );
