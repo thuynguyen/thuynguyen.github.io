@@ -5,11 +5,29 @@
   $('#image4doodle').change(magic.loadImageFile)
   //$('#addAnimation').click(magic.addAnimation)
   $('#_addAnimation').click(function() {
+    $('#_addLeftAnimation').addClass("disabled")
+    $('#_addRightAnimation').addClass("disabled")
+    $('#_addBottomTopAnimation').addClass("disabled")
   	magic.startRecordInWorker()
   })
-  $('#_addLeftAnimation').click(function() {magic.startRecordInWorker("public/images/magic/train.png", "Left")})
-  $('#_addRightAnimation').click(function() {magic.startRecordInWorker("public/images/magic/train.png", "Right")})
-  $('#_addBottomTopAnimation').click(function() {magic.startRecordInWorker("img/space_ship.png", "Top")})
+  $('#_addLeftAnimation').click(function() {
+    $('#_addAnimation').addClass("disabled")
+    $('#_addRightAnimation').addClass("disabled")
+    $('#_addBottomTopAnimation').addClass("disabled")
+    magic.startRecordInWorker("public/images/magic/train.png", "Left")})
+  $('#_addRightAnimation').click(function() {
+    $('#_addAnimation').addClass("disabled")
+    $('#_addLeftAnimation').addClass("disabled")
+    $('#_addBottomTopAnimation').addClass("disabled")
+    magic.startRecordInWorker("public/images/magic/train.png", "Right")})
+  $('#_addBottomTopAnimation').click(function() {
+    $('#_addAnimation').addClass("disabled")
+    $('#_addLeftAnimation').addClass("disabled")
+    $('#_addRightAnimation').addClass("disabled")
+    magic.startRecordInWorker("img/space_ship.png", "Top")})
+    
+
+
   //$('#startRecord').click(magic.startStopRecord)
   $('#preview').click(magic.preview)
   $('#view_text').click(magic.drawText)
