@@ -247,21 +247,22 @@
         startAnimateTime = timestamp
       }
 
-    if ((timestamp - startAnimateTime) > 10000) {
-      lastDrawAnimateTime = undefined
-      startAnimateTime = undefined
-      for_x = 0
-      rawCanvasCtx.drawImage(bg, 0, 0, canvas.width, canvas.height)
-      // for voice button
-      $("#voice-icon").show();
-      $("#voice-icon-disabled").hide();
-      return
-    }
+      if ((timestamp - startAnimateTime) > 10000) {
+        lastDrawAnimateTime = undefined
+        startAnimateTime = undefined
+        for_x = 0
+        rawCanvasCtx.drawImage(bg, 0, 0, canvas.width, canvas.height)
+        // for voice button
+        $("#voice-icon").show();
+        $("#voice-icon-disabled").hide();
+        return
+      }
 
-    if (lastDrawAnimateTime === undefined || (timestamp - lastDrawAnimateTime) > frameTime) {
-      rotateImage.update();
-      rotateImage.render();
-      lastDrawAnimateTime = timestamp
+      if (lastDrawAnimateTime === undefined || (timestamp - lastDrawAnimateTime) > frameTime) {
+        rotateImage.update();
+        rotateImage.render();
+        lastDrawAnimateTime = timestamp
+      }
     }
     console.log("timestamp==== "+timestamp)
     window.requestAnimationFrame(magic.gameLoop);
