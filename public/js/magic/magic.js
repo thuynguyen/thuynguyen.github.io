@@ -95,7 +95,7 @@
     magic.addAnimation(src, direction)
   }
 
-  magic.addAlreadyAnimation = function() {
+  magic.addDove = function() {
     // For Left
     img = new Image();
     rotateImage = magic.sprite({
@@ -117,7 +117,7 @@
     img.src = "public/images/magic/dove.png";
   }
 
-  magic.addRightAnimation = function() {
+  magic.addTrain = function() {
     // For Train
     img = new Image();
     rotateImage = magic.sprite({
@@ -139,7 +139,7 @@
     img.src = "public/images/magic/train.png";
   }
 
-  magic.addBottomTopAnimation = function() {
+  magic.addShuttle = function() {
     // For Top
     img = new Image();
     rotateImage = magic.sprite({
@@ -160,7 +160,7 @@
     }
     img.src = "public/images/magic/shuttle.png";
   }
-  magic.addLeftAnimation = function() {
+  magic.addFan = function() {
     img = new Image();
     rotateImage = magic.sprite({
       context: canvas.getContext("2d"),
@@ -184,16 +184,16 @@
   magic.addAnimation = function(src_img, direction) {
     switch (direction) {
         case left:
-          magic.addLeftAnimation()
+          magic.addFan()
           break;
         case right:
-          magic.addRightAnimation()
+          magic.addTrain()
           break;
         case top:
-          magic.addBottomTopAnimation()
+          magic.addShuttle()
           break;
         default:
-          magic.addAlreadyAnimation()
+          magic.addDove()
           break;
       }
     window.c = canvas;
