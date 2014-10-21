@@ -38,7 +38,7 @@
     // canvas = new fabric.Canvas(canvasId)
     //canvas = document.getElementById(canvasId)
     bg = new Image()
-    bg.src = "public/images/doodle.gif"
+    bg.src = "public/images/magic/sample_doodle.png"
   }
 
   magic.loadBg = function() {

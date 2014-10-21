@@ -34,8 +34,8 @@
   // Init for text magic
   textMagic.init({canvasId: 'playground',
                 finished: function() { console.log('Done')},
-                background: 'public/images/doodle1.gif',
-                text: 'Hello world'
+                background: 'public/images/magic/sample_doodle.png',
+                text: 'Google'
   })
   $("#addTextMagic").click(textMagic.startTransform)
 
@@ -63,11 +63,7 @@
     }
   });
 
-  textMagic.init({canvasId: 'playground',
-                finished: function() { console.log('Done')},
-                background: 'public/images/doodle1.gif',
-                text: 'Hello world'
-  })
+  
   $("#addTextMagic").click(textMagic.startTransform)
 });
 $(window).resize( magic.respondCanvas );
