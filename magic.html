@@ -36,8 +36,13 @@
           <input type='button' id='_addBottomTopAnimation' value='Add Shuttle' class="btn btn-primary">
           <input type='button' id='addTextMagic' value='Add Text Magic' class="btn btn-primary">
           <input type='button' id='preview' value='Preview' class="btn btn-primary disabled">
+          <input type='button' id='voice-icon' value='Voice' class="btn btn-primary">
         </div>
+        <input type="textbox" name="text" x-webkit-speech style='font-size:20px;margin:2em;position:absolute;top:-95px;left:0;border:none;background:transparent;' id="voice-text" />
+        <a id='close-keyboard'>Close</a>
         <script src="./public/js/base/jquery.min.js"></script>
+        <script src="./public/js/base/underscore.js"></script>
+        <script src="./vendor/fabric.js"></script>
         <script type="text/javascript" src="./vendor/LZWEncoder.js"></script>
         <script type="text/javascript" src="./vendor/NeuQuant.js"></script>
         <script type="text/javascript" src="./vendor/GIFEncoder.js"></script>
