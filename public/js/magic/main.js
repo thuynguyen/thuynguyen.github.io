@@ -62,8 +62,6 @@
       eval(current_animations[0]["method"]);
     }
   });
-
   
-  $("#addTextMagic").click(textMagic.startTransform)
 });
 $(window).resize( magic.respondCanvas );
