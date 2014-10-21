@@ -27,19 +27,23 @@ body {
 #main .grid-icon {
   position: absolute;
 }
-/* line 20, demo.scss */
+/* line 19, demo.scss */
+#main .grid-icon .voice-icon-disabled {
+  opacity: 0.3;
+}
+/* line 23, demo.scss */
 #main .top-banner {
   background-color: #ec3a38;
 }
 
-/* line 24, demo.scss */
+/* line 27, demo.scss */
 .splash-slide {
   position: relative;
   margin: auto;
   text-align: center;
 }
 
-/* line 29, demo.scss */
+/* line 32, demo.scss */
 .slick-slider {
   width: 100%;
   height: 100%;
@@ -47,25 +51,25 @@ body {
   /*Categories list*/
   /*---end---*/
 }
-/* line 34, demo.scss */
+/* line 37, demo.scss */
 .slick-slider .instruction-slide img {
   width: 70%;
   margin-right: 10%;
 }
-/* line 41, demo.scss */
+/* line 44, demo.scss */
 .slick-slider .categories-list .group-1, .slick-slider .categories-list .group-2 {
   width: 100%;
 }
-/* line 43, demo.scss */
+/* line 46, demo.scss */
 .slick-slider .categories-list .group-1 .item, .slick-slider .categories-list .group-2 .item {
   position: relative;
   float: left;
 }
-/* line 46, demo.scss */
+/* line 49, demo.scss */
 .slick-slider .categories-list .group-1 .item img, .slick-slider .categories-list .group-2 .item img {
   width: 100%;
 }
-/* line 49, demo.scss */
+/* line 52, demo.scss */
 .slick-slider .categories-list .group-1 .item .age, .slick-slider .categories-list .group-2 .item .age {
   opacity: 0.9;
   position: absolute;
@@ -74,129 +78,129 @@ body {
   width: 100%;
   color: white;
 }
-/* line 56, demo.scss */
+/* line 59, demo.scss */
 .slick-slider .categories-list .group-1 .item .age .quantity, .slick-slider .categories-list .group-2 .item .age .quantity {
   float: right;
 }
-/* line 60, demo.scss */
+/* line 63, demo.scss */
 .slick-slider .categories-list .group-1 .item .color1, .slick-slider .categories-list .group-2 .item .color1 {
   background-color: #e74a2f;
 }
-/* line 63, demo.scss */
+/* line 66, demo.scss */
 .slick-slider .categories-list .group-1 .item .color2, .slick-slider .categories-list .group-2 .item .color2 {
   background-color: #5ab557;
 }
-/* line 66, demo.scss */
+/* line 69, demo.scss */
 .slick-slider .categories-list .group-1 .item .color3, .slick-slider .categories-list .group-2 .item .color3 {
   background-color: #5496ca;
 }
-/* line 69, demo.scss */
+/* line 72, demo.scss */
 .slick-slider .categories-list .group-1 .item .color4, .slick-slider .categories-list .group-2 .item .color4 {
   background-color: #fbbc0b;
 }
-/* line 76, demo.scss */
+/* line 79, demo.scss */
 .slick-slider .back-icon {
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 81, demo.scss */
+/* line 84, demo.scss */
 .slick-slider .title {
   /*margin-left: 2.5em;*/
 }
-/* line 83, demo.scss */
+/* line 86, demo.scss */
 .slick-slider .title .text-wrapper {
   float: left;
 }
-/* line 86, demo.scss */
+/* line 89, demo.scss */
 .slick-slider .title .get-start {
   float: right;
   margin-right: 2.5em;
   margin-top: 4em;
 }
-/* line 91, demo.scss */
+/* line 94, demo.scss */
 .slick-slider .title .btn-red {
   background-color: #e44330;
   border-color: #e44330;
 }
-/* line 97, demo.scss */
+/* line 100, demo.scss */
 .slick-slider .title .btn-submit {
   background-color: #e74a2f;
   border-color: #e74a2f;
 }
-/* line 101, demo.scss */
+/* line 104, demo.scss */
 .slick-slider .title .btn-add-magic {
   background-color: #49af48;
   border-color: #49af48;
 }
-/* line 105, demo.scss */
+/* line 108, demo.scss */
 .slick-slider .title .btn-view-gallery {
   background-color: #438ecc;
   border-color: #438ecc;
 }
-/* line 109, demo.scss */
+/* line 112, demo.scss */
 .slick-slider .title span.g-plus {
   float: left;
   width: 15%;
   border-right: 1px solid #d1442b;
 }
-/* line 113, demo.scss */
+/* line 116, demo.scss */
 .slick-slider .title span.g-plus img {
   height: 1.8em;
 }
-/* line 117, demo.scss */
+/* line 120, demo.scss */
 .slick-slider .title span.text {
   float: left;
   width: 85%;
   text-align: center;
   margin-top: 0.2em;
 }
-/* line 123, demo.scss */
+/* line 126, demo.scss */
 .slick-slider .title span.text-center {
   text-align: center;
   margin-top: 0.2em;
 }
 
-/* line 131, demo.scss */
+/* line 134, demo.scss */
 .slick-slide img {
   margin: 0 auto;
 }
 
-/* line 135, demo.scss */
+/* line 138, demo.scss */
 .slick-next {
   background: url("./../../public/images/next-icon.png") no-repeat;
   width: 27px;
   height: 27px;
   right: 5%;
 }
-/* line 140, demo.scss */
+/* line 143, demo.scss */
 .slick-next:before {
   content: "" !important;
 }
-/* line 143, demo.scss */
+/* line 146, demo.scss */
 .slick-next:hover {
   opacity: 0.5;
   background: url("./../../public/images/next-icon.png") no-repeat;
 }
 
-/* line 148, demo.scss */
+/* line 151, demo.scss */
 .slick-prev {
   background: url("./../../public/images/prev-icon.png") no-repeat;
   width: 27px;
   height: 27px;
   left: 5%;
 }
-/* line 153, demo.scss */
+/* line 156, demo.scss */
 .slick-prev:before {
   content: "" !important;
 }
-/* line 156, demo.scss */
+/* line 159, demo.scss */
 .slick-prev:hover {
   opacity: 0.5;
   background: url("./../../public/images/prev-icon.png") no-repeat;
 }
 
-/* line 162, demo.scss */
+/* line 165, demo.scss */
 .slick-dots button {
   background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
   border-radius: 20px;
@@ -207,148 +211,148 @@ body {
   text-indent: -9999px;
   width: 10px !important;
 }
-/* line 173, demo.scss */
+/* line 176, demo.scss */
 .slick-dots .slick-active button {
   box-shadow: 0 0 13px #1bb5f8 inset !important;
 }
 
 /*Facebook*/
-/* line 179, demo.scss */
+/* line 182, demo.scss */
 .fb-share-button {
   float: left;
 }
 
-/* line 182, demo.scss */
+/* line 185, demo.scss */
 .ZMConnectIcon_Text {
   background: none !important;
 }
 
 /*Landscape*/
 @media all and (orientation: landscape) {
-  /* line 187, demo.scss */
+  /* line 190, demo.scss */
   #main {
     /*Gallery*/
     /*end*/
     /*Home page*/
     /*---end---*/
   }
-  /* line 190, demo.scss */
+  /* line 193, demo.scss */
   #main .gallery .thumbnail-list {
     padding: 2%;
   }
-  /* line 192, demo.scss */
+  /* line 195, demo.scss */
   #main .gallery .thumbnail-list .rows {
     width: 100%;
     margin-bottom: 2%;
   }
-  /* line 195, demo.scss */
+  /* line 198, demo.scss */
   #main .gallery .thumbnail-list .rows .item {
     width: 48.7%;
     float: left;
   }
-  /* line 198, demo.scss */
+  /* line 201, demo.scss */
   #main .gallery .thumbnail-list .rows .item img {
     width: 100%;
     height: 35vh;
   }
-  /* line 207, demo.scss */
+  /* line 210, demo.scss */
   #main .top-banner {
     background-color: #ec3a38;
     height: 20vh;
   }
-  /* line 211, demo.scss */
+  /* line 214, demo.scss */
   #main .grid-icon {
     top: 1em;
     right: 1em;
   }
-  /* line 214, demo.scss */
+  /* line 217, demo.scss */
   #main .grid-icon img {
     width: 60%;
   }
-  /* line 219, demo.scss */
+  /* line 222, demo.scss */
   #main .top-effect img {
     width: 45%;
     float: left;
     height: 42vh;
   }
-  /* line 228, demo.scss */
+  /* line 231, demo.scss */
   #main .home .top-effect img {
     width: 45%;
     float: left;
     height: 42vh;
   }
-  /* line 234, demo.scss */
+  /* line 237, demo.scss */
   #main .home .action-group {
     margin-top: 14% !important;
   }
-  /* line 237, demo.scss */
+  /* line 240, demo.scss */
   #main .home .bottom-effect {
     margin-top: 0%;
   }
-  /* line 239, demo.scss */
+  /* line 242, demo.scss */
   #main .home .bottom-effect img {
     width: 36% !important;
     height: 43vh;
   }
-  /* line 246, demo.scss */
+  /* line 249, demo.scss */
   #main .bottom-effect {
     display: block;
     text-align: right;
   }
-  /* line 249, demo.scss */
+  /* line 252, demo.scss */
   #main .bottom-effect img {
     width: 34% !important;
     margin-right: 0 !important;
   }
-  /* line 254, demo.scss */
+  /* line 257, demo.scss */
   #main .slick-slider {
     width: 100%;
     height: 100%;
     /*Categories list*/
     /*---end---*/
   }
-  /* line 257, demo.scss */
+  /* line 260, demo.scss */
   #main .slick-slider .action-group {
     margin-top: 5.9em;
   }
-  /* line 261, demo.scss */
+  /* line 264, demo.scss */
   #main .slick-slider .back-icon img {
     width: 50%;
     margin-left: 1.2em;
     margin-top: 0.9em;
   }
-  /* line 267, demo.scss */
+  /* line 270, demo.scss */
   #main .slick-slider .instruction-slide {
     margin-top: 7.3em;
   }
-  /* line 269, demo.scss */
+  /* line 272, demo.scss */
   #main .slick-slider .instruction-slide img {
     width: 64%;
     margin-right: 10%;
   }
-  /* line 274, demo.scss */
+  /* line 277, demo.scss */
   #main .slick-slider .instruction-text {
     display: block;
     padding: 1em;
     background-color: #d5d6d7;
   }
-  /* line 278, demo.scss */
+  /* line 281, demo.scss */
   #main .slick-slider .instruction-text .title {
     font-weight: bold;
     font-size: 14pt;
   }
-  /* line 283, demo.scss */
+  /* line 286, demo.scss */
   #main .slick-slider .doodles-slider {
     margin: 12% 0;
     background-color: white;
     padding: 4.5%;
   }
-  /* line 287, demo.scss */
+  /* line 290, demo.scss */
   #main .slick-slider .doodles-slider img {
     width: 100%;
     height: 65%;
   }
-  /* line 291, demo.scss */
+  /* line 294, demo.scss */
   #main .slick-slider .doodles-slider .slick-prev {
     background: url("./../../public/images/prev-slider-icon.png") no-repeat;
     background-size: 96% 100%;
@@ -356,7 +360,7 @@ body {
     height: 28px;
     left: 3%;
   }
-  /* line 298, demo.scss */
+  /* line 301, demo.scss */
   #main .slick-slider .doodles-slider .slick-next {
     background: url("./../../public/images/next-slider-icon.png") no-repeat;
     background-size: 96% 100%;
@@ -364,104 +368,104 @@ body {
     height: 28px;
     right: 3%;
   }
-  /* line 306, demo.scss */
+  /* line 309, demo.scss */
   #main .slick-slider .btn-red {
     font-size: 13pt;
     padding: 2% 2%;
     margin: 3% 25%;
   }
-  /* line 311, demo.scss */
+  /* line 314, demo.scss */
   #main .slick-slider .btn-gallery {
     font-size: 13pt;
     padding: 3% 3%;
     margin: 2% 25%;
   }
-  /* line 316, demo.scss */
+  /* line 319, demo.scss */
   #main .slick-slider .btn-submit {
     font-size: 13pt;
     padding: 2.7% 2%;
     margin: 3% 25%;
   }
-  /* line 321, demo.scss */
+  /* line 324, demo.scss */
   #main .slick-slider .btn-add-magic {
     font-size: 13pt;
     padding: 2.7% 2%;
     margin: 2.9% 25%;
   }
-  /* line 326, demo.scss */
+  /* line 329, demo.scss */
   #main .slick-slider .btn-view-gallery {
     font-size: 13pt;
     padding: 2.7% 2%;
     margin: 2% 25%;
   }
-  /* line 331, demo.scss */
+  /* line 334, demo.scss */
   #main .slick-slider .bold {
     font-weight: bold;
   }
-  /* line 335, demo.scss */
+  /* line 338, demo.scss */
   #main .slick-slider .categories-list {
     margin: 5% 0;
   }
-  /* line 337, demo.scss */
+  /* line 340, demo.scss */
   #main .slick-slider .categories-list .group-1, #main .slick-slider .categories-list .group-2 {
     padding: 0.2em 13%;
   }
-  /* line 339, demo.scss */
+  /* line 342, demo.scss */
   #main .slick-slider .categories-list .group-1 .item, #main .slick-slider .categories-list .group-2 .item {
     width: 43.5%;
     margin: 0.8em !important;
   }
-  /* line 342, demo.scss */
+  /* line 345, demo.scss */
   #main .slick-slider .categories-list .group-1 .item .age, #main .slick-slider .categories-list .group-2 .item .age {
     height: 1.9em;
     padding: 0.2em 0;
   }
-  /* line 345, demo.scss */
+  /* line 348, demo.scss */
   #main .slick-slider .categories-list .group-1 .item .age .ages, #main .slick-slider .categories-list .group-2 .item .age .ages {
     margin-left: 0.2em;
   }
-  /* line 348, demo.scss */
+  /* line 351, demo.scss */
   #main .slick-slider .categories-list .group-1 .item .age .quantity, #main .slick-slider .categories-list .group-2 .item .age .quantity {
     margin-right: 0.4em;
   }
 
   /*Add magic*/
-  /* line 361, demo.scss */
+  /* line 364, demo.scss */
   .add-magic .back-icon img {
     width: 52% !important;
     margin-left: 1.2em;
     margin-top: 1.1em !important;
   }
-  /* line 367, demo.scss */
+  /* line 370, demo.scss */
   .add-magic .canvas-wrapper {
     margin: 10% 0;
     background-color: white;
     padding: 4.5%;
   }
-  /* line 371, demo.scss */
+  /* line 374, demo.scss */
   .add-magic .canvas-wrapper img {
     width: 100%;
     height: 70vh;
   }
-  /* line 376, demo.scss */
+  /* line 379, demo.scss */
   .add-magic .record {
     text-align: center;
   }
-  /* line 378, demo.scss */
+  /* line 381, demo.scss */
   .add-magic .record img {
     width: 8%;
     margin-bottom: 0.5em;
   }
-  /* line 383, demo.scss */
+  /* line 386, demo.scss */
   .add-magic .grid-icon {
     right: 0 !important;
   }
-  /* line 385, demo.scss */
+  /* line 388, demo.scss */
   .add-magic .grid-icon .text-transform {
     display: inline;
     width: 35% !important;
   }
-  /* line 389, demo.scss */
+  /* line 392, demo.scss */
   .add-magic .grid-icon .voice-recog {
     display: inline;
     width: 21% !important;
@@ -469,7 +473,7 @@ body {
   }
 
   /*---end---*/
-  /* line 397, demo.scss */
+  /* line 400, demo.scss */
   img.splash-image {
     width: 56%;
     height: 82vh;
@@ -478,79 +482,79 @@ body {
 /*Portrait*/
 /*@media only screen and (max-width: 767px) and (orientation: portrait){*/
 @media all and (orientation: portrait) {
-  /* line 405, demo.scss */
+  /* line 408, demo.scss */
   #main {
     /*Gallery*/
     /*---end---*/
     /*Home page*/
     /*---end---*/
   }
-  /* line 408, demo.scss */
+  /* line 411, demo.scss */
   #main .gallery .thumbnail-list {
     padding: 2%;
   }
-  /* line 410, demo.scss */
+  /* line 413, demo.scss */
   #main .gallery .thumbnail-list .rows {
     width: 100%;
     margin-bottom: 2%;
   }
-  /* line 413, demo.scss */
+  /* line 416, demo.scss */
   #main .gallery .thumbnail-list .rows .item {
     width: 48.7%;
     float: left;
   }
-  /* line 416, demo.scss */
+  /* line 419, demo.scss */
   #main .gallery .thumbnail-list .rows .item img {
     width: 100%;
     height: 14vh;
   }
-  /* line 426, demo.scss */
+  /* line 429, demo.scss */
   #main .top-banner {
     background-color: #ec3a38;
     height: 11.6vh;
   }
-  /* line 430, demo.scss */
+  /* line 433, demo.scss */
   #main .grid-icon {
     top: 1em;
     right: 1em;
   }
-  /* line 433, demo.scss */
+  /* line 436, demo.scss */
   #main .grid-icon img {
     width: 60%;
   }
-  /* line 438, demo.scss */
+  /* line 441, demo.scss */
   #main .top-effect img {
     width: 40%;
     float: left;
   }
-  /* line 446, demo.scss */
+  /* line 449, demo.scss */
   #main .home .top-effect img {
     width: 40%;
     float: left;
   }
-  /* line 451, demo.scss */
+  /* line 454, demo.scss */
   #main .home .action-group {
     margin-top: 23% !important;
   }
-  /* line 454, demo.scss */
+  /* line 457, demo.scss */
   #main .home .bottom-effect {
     margin-top: 6.7%;
   }
-  /* line 456, demo.scss */
+  /* line 459, demo.scss */
   #main .home .bottom-effect img {
     width: 47% !important;
   }
-  /* line 462, demo.scss */
+  /* line 465, demo.scss */
   #main .bottom-effect {
     display: block;
     text-align: right;
   }
-  /* line 465, demo.scss */
+  /* line 468, demo.scss */
   #main .bottom-effect img {
     width: 48% !important;
     margin-right: 0 !important;
   }
-  /* line 470, demo.scss */
+  /* line 473, demo.scss */
   #main .slick-slider {
     width: 100%;
     height: 100%;
@@ -559,48 +563,48 @@ body {
     /*Categories list*/
     /*---end---*/
   }
-  /* line 473, demo.scss */
+  /* line 476, demo.scss */
   #main .slick-slider .action-group {
     margin-top: 5.9em;
   }
-  /* line 477, demo.scss */
+  /* line 480, demo.scss */
   #main .slick-slider .back-icon img {
     width: 50%;
     margin-left: 1.2em;
     margin-top: 0.9em;
   }
-  /* line 483, demo.scss */
+  /* line 486, demo.scss */
   #main .slick-slider .instruction-slide {
     margin-top: 7.3em;
   }
-  /* line 485, demo.scss */
+  /* line 488, demo.scss */
   #main .slick-slider .instruction-slide img {
     width: 77%;
     margin-right: 8%;
   }
-  /* line 490, demo.scss */
+  /* line 493, demo.scss */
   #main .slick-slider .instruction-text {
     display: block;
     padding: 1em;
     background-color: #d5d6d7;
   }
-  /* line 494, demo.scss */
+  /* line 497, demo.scss */
   #main .slick-slider .instruction-text .title {
     font-weight: bold;
     font-size: 14pt;
   }
-  /* line 500, demo.scss */
+  /* line 503, demo.scss */
   #main .slick-slider .doodles-slider {
     margin: 28.3% 0;
     background-color: white;
     padding: 4.5%;
   }
-  /* line 504, demo.scss */
+  /* line 507, demo.scss */
   #main .slick-slider .doodles-slider img {
     width: 100%;
     height: 29%;
   }
-  /* line 508, demo.scss */
+  /* line 511, demo.scss */
   #main .slick-slider .doodles-slider .slick-prev {
     background: url("./../../public/images/prev-slider-icon.png") no-repeat;
     background-size: 96% 100%;
@@ -608,7 +612,7 @@ body {
     height: 28px;
     left: 3%;
   }
-  /* line 515, demo.scss */
+  /* line 518, demo.scss */
   #main .slick-slider .doodles-slider .slick-next {
     background: url("./../../public/images/next-slider-icon.png") no-repeat;
     background-size: 96% 100%;
@@ -616,102 +620,102 @@ body {
     height: 28px;
     right: 3%;
   }
-  /* line 524, demo.scss */
+  /* line 527, demo.scss */
   #main .slick-slider .btn-red {
     font-size: 13pt;
     padding: 2.2% 2%;
     margin: 6% 10%;
   }
-  /* line 529, demo.scss */
+  /* line 532, demo.scss */
   #main .slick-slider .btn-gallery {
     font-size: 13pt;
     padding: 3.2% 3%;
     margin: 5% 10%;
   }
-  /* line 534, demo.scss */
+  /* line 537, demo.scss */
   #main .slick-slider .btn-submit {
     font-size: 13pt;
     padding: 3.2% 2%;
     margin: 6% 10%;
   }
-  /* line 539, demo.scss */
+  /* line 542, demo.scss */
   #main .slick-slider .btn-add-magic {
     font-size: 13pt;
     padding: 3.2% 2%;
     margin: 5.9% 10%;
   }
-  /* line 544, demo.scss */
+  /* line 547, demo.scss */
   #main .slick-slider .btn-view-gallery {
     font-size: 13pt;
     padding: 3.2% 2%;
     margin: 5% 10%;
   }
-  /* line 549, demo.scss */
+  /* line 552, demo.scss */
   #main .slick-slider .bold {
     font-weight: bold;
   }
-  /* line 553, demo.scss */
+  /* line 556, demo.scss */
   #main .slick-slider .categories-list {
     margin-top: 20%;
   }
-  /* line 555, demo.scss */
+  /* line 558, demo.scss */
   #main .slick-slider .categories-list .group-1, #main .slick-slider .categories-list .group-2 {
     padding: 0.2em 0.5em;
   }
-  /* line 557, demo.scss */
+  /* line 560, demo.scss */
   #main .slick-slider .categories-list .group-1 .item, #main .slick-slider .categories-list .group-2 .item {
     width: 48.7%;
   }
-  /* line 559, demo.scss */
+  /* line 562, demo.scss */
   #main .slick-slider .categories-list .group-1 .item .age, #main .slick-slider .categories-list .group-2 .item .age {
     height: 1.9em;
     padding: 0.2em 0;
   }
-  /* line 562, demo.scss */
+  /* line 565, demo.scss */
   #main .slick-slider .categories-list .group-1 .item .age .ages, #main .slick-slider .categories-list .group-2 .item .age .ages {
     margin-left: 0.2em;
   }
-  /* line 565, demo.scss */
+  /* line 568, demo.scss */
   #main .slick-slider .categories-list .group-1 .item .age .quantity, #main .slick-slider .categories-list .group-2 .item .age .quantity {
     margin-right: 0.4em;
   }
 
   /*Add magic*/
-  /* line 578, demo.scss */
+  /* line 581, demo.scss */
   .add-magic .back-icon img {
     width: 52% !important;
     margin-left: 1.2em;
     margin-top: 1.1em !important;
   }
-  /* line 584, demo.scss */
+  /* line 587, demo.scss */
   .add-magic .canvas-wrapper {
     margin: 30% 0;
     background-color: white;
     padding: 4.5%;
   }
-  /* line 588, demo.scss */
+  /* line 591, demo.scss */
   .add-magic .canvas-wrapper img {
     width: 100%;
     height: 65%;
   }
-  /* line 593, demo.scss */
+  /* line 596, demo.scss */
   .add-magic .record {
     text-align: center;
   }
-  /* line 595, demo.scss */
+  /* line 598, demo.scss */
   .add-magic .record img {
     width: 16%;
   }
-  /* line 599, demo.scss */
+  /* line 602, demo.scss */
   .add-magic .grid-icon {
     right: 0 !important;
   }
-  /* line 601, demo.scss */
+  /* line 604, demo.scss */
   .add-magic .grid-icon .text-transform {
     display: inline;
     width: 35% !important;
   }
-  /* line 605, demo.scss */
+  /* line 608, demo.scss */
   .add-magic .grid-icon .voice-recog {
     display: inline;
     width: 21% !important;
@@ -720,7 +724,7 @@ body {
 
   /*---end---*/
   /*Splash page*/
-  /* line 614, demo.scss */
+  /* line 617, demo.scss */
   img.splash-image {
     width: 60%;
     height: 60%;

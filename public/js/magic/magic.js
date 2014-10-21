@@ -40,14 +40,14 @@
     bg = new Image()
     bg.src = "public/images/doodle.gif"
   }
-  
+
   magic.loadBg = function() {
     // fabric.Image.fromURL("public/images/magic/sample_doodle1.png", function(img) {
     //     //img.set('top', fabric.util.getRandomInt(1, 1)).set('top', 0);
     //     //img.movingRight = !!Math.round(Math.random());
     //     canvas.add(img);
     //     canvas.item(0).hasControls = canvas.item(0).hasBorders = false;
-    //     canvas.item(0).lockMovementY = canvas.item(0).lockMovementX = true; 
+    //     canvas.item(0).lockMovementY = canvas.item(0).lockMovementX = true;
     //   });
     bg.src = bg.src
     bg.onload = function() {
@@ -81,7 +81,7 @@
       // them on the server until the user's session ends.
     }
   }
-  
+
   magic.startRecordInWorker = function(src, direction) {
     worker = new Worker('public/js/magic/magicWorker.js')
     progress = 0
@@ -113,7 +113,7 @@
       spriteSize: doveSprite.length,
       bg: bg
     });
-  
+
   // Load sprite sheet
     img.onload = function() {
       magic.gameLoop()
@@ -135,7 +135,7 @@
       spriteSize: shuttleSprite.length,
       bg: bg
     });
-  
+
   // Load sprite sheet
     img.onload = function() {
       magic.gameLoop()
@@ -157,7 +157,7 @@
       spriteSize: shuttleSprite.length,
       bg: bg
     });
-  
+
   // Load sprite sheet
     img.onload = function() {
       magic.gameLoop()
@@ -177,7 +177,7 @@
       spriteSize: fanSprite.length,
       bg: bg
     });
-  
+
   // Load sprite sheet
     img.onload = function() {
       magic.gameLoop()
@@ -209,7 +209,7 @@
   }
 
   magic.recordFrame = function(timestamp) {
-    
+
     if (startRecordingTime === null) {
       startRecordingTime = timestamp
     }
@@ -236,36 +236,37 @@
   magic.preview = function() {
     window.location.href = "preview.html"
   }
-  
+
 
   magic.gameLoop = function(timestamp) {
     if (timestamp !== NaN || timestamp !== undefined) {
       for_x++;
       //if (for_x > 300) {for_x = 0; return}
-      
+
       if (startAnimateTime === undefined) {
         startAnimateTime = timestamp
       }
 
-      if ((timestamp - startAnimateTime) > 10000) {
-        lastDrawAnimateTime = undefined
-        startAnimateTime = undefined
-        for_x = 0
-        rawCanvasCtx.drawImage(bg, 0, 0, canvas.width, canvas.height)
-        return
-      }
-      
-      if (lastDrawAnimateTime === undefined || (timestamp - lastDrawAnimateTime) > frameTime) {
-        
-        rotateImage.update();
-        rotateImage.render();
-        lastDrawAnimateTime = timestamp
-      }
+    if ((timestamp - startAnimateTime) > 10000) {
+      lastDrawAnimateTime = undefined
+      startAnimateTime = undefined
+      for_x = 0
+      rawCanvasCtx.drawImage(bg, 0, 0, canvas.width, canvas.height)
+      // for voice button
+      $("#voice-icon").show();
+      $("#voice-icon-disabled").hide();
+      return
+    }
+
+    if (lastDrawAnimateTime === undefined || (timestamp - lastDrawAnimateTime) > frameTime) {
+      rotateImage.update();
+      rotateImage.render();
+      lastDrawAnimateTime = timestamp
     }
     console.log("timestamp==== "+timestamp)
     window.requestAnimationFrame(magic.gameLoop);
-    
-    
+
+
   }
   magic.sprite = function(options) {
     var that = {},
@@ -273,7 +274,7 @@
       tickCount = 0,
       ticksPerFrame = options.ticksPerFrame || 0,
       numberOfFrames = options.numberOfFrames || 1;
-      
+
       that.context = options.context;
       that.width = options.width;
       that.height = options.height;
@@ -289,32 +290,32 @@
         else
           currentID = 0;
       };
-    
+
       that.render = function () {
         console.log("for_x "+for_x)
-        that.context.clearRect(0,0, canvas.width, canvas.height); 
+        that.context.clearRect(0,0, canvas.width, canvas.height);
         that.context.drawImage(bg, 0, 0, canvas.width, canvas.height)
         console.log("currentID in render===="+currentID)
         if (that.direction == top) {
           that.context.drawImage(that.image,
-            shuttleSprite[currentID].frame.x, shuttleSprite[currentID].frame.y, shuttleSprite[currentID].frame.w, shuttleSprite[currentID].frame.h, 
+            shuttleSprite[currentID].frame.x, shuttleSprite[currentID].frame.y, shuttleSprite[currentID].frame.w, shuttleSprite[currentID].frame.h,
               50, canvas.height-for_x, shuttleSprite[currentID].frame.w, shuttleSprite[currentID].frame.h); //
         } else if (that.direction == left) {
             for (var i = 0; i < that.spriteSize; i++) {
               if (currentID == parseInt(fanSprite[i].filename)) {
                 console.log("------order----"+fanSprite[i].filename)
-                that.context.drawImage(that.image, fanSprite[currentID].frame.x, fanSprite[currentID].frame.y, fanSprite[currentID].frame.w, fanSprite[currentID].frame.h, 
+                that.context.drawImage(that.image, fanSprite[currentID].frame.x, fanSprite[currentID].frame.y, fanSprite[currentID].frame.w, fanSprite[currentID].frame.h,
                                   canvas.width/2-200,0, fanSprite[currentID].frame.w, fanSprite[currentID].frame.h);
               }
             }
         } else if (that.direction == right) {
-          that.context.drawImage(that.image, doveSprite[currentID].frame.x, doveSprite[currentID].frame.y, doveSprite[currentID].frame.w, doveSprite[currentID].frame.h, 
+          that.context.drawImage(that.image, doveSprite[currentID].frame.x, doveSprite[currentID].frame.y, doveSprite[currentID].frame.w, doveSprite[currentID].frame.h,
                             canvas.width-for_x, 20, doveSprite[currentID].frame.w, doveSprite[currentID].frame.h);
         } else {
-           that.context.drawImage(that.image, 0, 0, 558, 50, 
+           that.context.drawImage(that.image, 0, 0, 558, 50,
                                   canvas.width - for_x*10, 100, 558, 50);
         }
-        
+
 
     };
     return that;
@@ -327,7 +328,7 @@
     bg.src = bg.src
     canvas.getContext("2d").drawImage(bg, 0, 0, canvas.width, canvas.height)
   }
- 
+
   magic.canvas = function() {
     return canvas
   }

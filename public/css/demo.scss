@@ -16,6 +16,9 @@ body{
   }
   .grid-icon{
     position: absolute;
+    .voice-icon-disabled{
+      opacity: 0.3;
+    }
   }
   .top-banner{
     background-color: #ec3a38;
