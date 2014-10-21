@@ -56,7 +56,7 @@ D4G.prototype.hideNavIconOnMobile = function() {
 D4G.prototype.clickSignIn = function() {
   $(".btn-signin").click(function(){
     $(this).css("opacity", 0.8);
-    document.location = "/home1.html";
+    document.location = "/action.html";
   });
 }
 D4G.prototype.clickViewGallery = function() {
@@ -80,7 +80,7 @@ D4G.prototype.goHome = function() {
 D4G.prototype.goBack = function(){
   $(".gallery #back-gallery-group").on("click", function(){
     $(this).children().css("opacity", 0.8);
-    document.location = "/home1.html";
+    document.location = "/action.html";
   });
 }
 D4G.prototype.viewThumb = function(){
