@@ -1,6 +1,5 @@
 ;jQuery(document).ready(function($) {
-  $("#magicpage").height = String(window.innerHeight)+"px";
-  $("#magicpage").width = String(window.innerWidth)+"px"
+  
   magic.loadCanvas('playground')
   magic.loadBg()
   $('#image4doodle').change(magic.loadImageFile)
@@ -18,7 +17,7 @@
   // Init for text magic
   textMagic.init({canvasId: 'playground',
                 finished: function() { console.log('Done')},
-                background: 'public/images/magic/sample_doodle.png',
+                background: 'public/images/doodle1.gif',
                 text: 'Hello world'
   })
   $("#addTextMagic").click(textMagic.startTransform)

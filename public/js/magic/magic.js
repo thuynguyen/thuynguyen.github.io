@@ -37,13 +37,9 @@
     // canvas = new fabric.Canvas(canvasId)
     //canvas = document.getElementById(canvasId)
     bg = new Image()
-    bg.src = "public/images/magic/sample_doodle.png"
+    bg.src = "public/images/doodle1.gif"
   }
-  magic.drawText = function() {
-    ctx = canvas.getContext("2d")
-    i++;
-    ctx.strokeText($("#input_text").val(), 10, 10*i);
-  }
+  
   magic.loadBg = function() {
     // fabric.Image.fromURL("public/images/magic/sample_doodle1.png", function(img) {
     //     //img.set('top', fabric.util.getRandomInt(1, 1)).set('top', 0);
@@ -54,7 +50,9 @@
     //   });
     bg.src = bg.src
     bg.onload = function() {
-      rawCanvasCtx.drawImage(bg, 0,0, canvas.width, canvas.height)
+      rawCanvasCtx.drawImage(bg, 0,0)
+      // rawCanvasCtx.canvas.width  = window.innerWidth;
+      // rawCanvasCtx.canvas.height = window.innerHeight;
     }
   }
   magic.loadImageFile = function(evt) {
@@ -83,17 +81,17 @@
   magic.startRecordInWorker = function(src, direction) {
     worker = new Worker('public/js/magic/magicWorker.js')
     progress = 0
-    worker.onmessage = function(event) {
-      if (event.data !== 'waiting') {
-        $("#preview").removeClass("disabled")
-        $("#preview").val("Preview")
-        localStorage.setItem('data_url', event.data)
-      } else {
-        // Waiting
-        progress += ((1.0/totalFrames) * 100)
-        $("#preview").val(progress.toFixed(2).toString() + "%")
-      }
-    }
+    // worker.onmessage = function(event) {
+    //   if (event.data !== 'waiting') {
+    //     $("#preview").removeClass("disabled")
+    //     $("#preview").val("Preview")
+    //     localStorage.setItem('data_url', event.data)
+    //   } else {
+    //     // Waiting
+    //     progress += ((1.0/totalFrames) * 100)
+    //     $("#preview").val(progress.toFixed(2).toString() + "%")
+    //   }
+    // }
     magic.addAnimation(src, direction)
   }
 
@@ -248,7 +246,7 @@
       startAnimateTime = timestamp
     }
 
-    if ((timestamp - startAnimateTime) > 10000) {
+    if ((timestamp - startAnimateTime) > 20000) {
       lastDrawAnimateTime = undefined
       startAnimateTime = undefined
       for_x = 0
@@ -303,15 +301,15 @@
               if (currentID == parseInt(fanSprite[i].filename)) {
                 console.log("------order----"+fanSprite[i].filename)
                 that.context.drawImage(that.image, fanSprite[currentID].frame.x, fanSprite[currentID].frame.y, fanSprite[currentID].frame.w, fanSprite[currentID].frame.h, 
-                                  0,0, fanSprite[currentID].frame.w, fanSprite[currentID].frame.h);
+                                  canvas.width/2-200,50, fanSprite[currentID].frame.w, fanSprite[currentID].frame.h);
               }
             }
         } else if (that.direction == right) {
           that.context.drawImage(that.image, doveSprite[currentID].frame.x, doveSprite[currentID].frame.y, doveSprite[currentID].frame.w, doveSprite[currentID].frame.h, 
-                            canvas.width-for_x*2, 20, doveSprite[currentID].frame.w, doveSprite[currentID].frame.h);
+                            canvas.width-for_x, 20, doveSprite[currentID].frame.w, doveSprite[currentID].frame.h);
         } else {
            that.context.drawImage(that.image, 0, 0, 558, 50, 
-                                  canvas.width - for_x*10, 50, 558, 50);
+                                  canvas.width - for_x*10, 100, 558, 50);
         }
         
 
