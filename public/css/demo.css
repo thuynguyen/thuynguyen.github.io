@@ -425,7 +425,51 @@ body {
     margin-right: 0.4em;
   }
 
-  /* line 358, demo.scss */
+  /*Add magic*/
+  /* line 361, demo.scss */
+  .add-magic .back-icon img {
+    width: 52% !important;
+    margin-left: 1.2em;
+    margin-top: 1.1em !important;
+  }
+  /* line 367, demo.scss */
+  .add-magic .canvas-wrapper {
+    margin: 10% 0;
+    background-color: white;
+    padding: 4.5%;
+  }
+  /* line 371, demo.scss */
+  .add-magic .canvas-wrapper img {
+    width: 100%;
+    height: 70vh;
+  }
+  /* line 376, demo.scss */
+  .add-magic .record {
+    text-align: center;
+  }
+  /* line 378, demo.scss */
+  .add-magic .record img {
+    width: 8%;
+    margin-bottom: 0.5em;
+  }
+  /* line 383, demo.scss */
+  .add-magic .grid-icon {
+    right: 0 !important;
+  }
+  /* line 385, demo.scss */
+  .add-magic .grid-icon .text-transform {
+    display: inline;
+    width: 35% !important;
+  }
+  /* line 389, demo.scss */
+  .add-magic .grid-icon .voice-recog {
+    display: inline;
+    width: 21% !important;
+    margin-left: 2em;
+  }
+
+  /*---end---*/
+  /* line 397, demo.scss */
   img.splash-image {
     width: 56%;
     height: 82vh;
@@ -434,79 +478,79 @@ body {
 /*Portrait*/
 /*@media only screen and (max-width: 767px) and (orientation: portrait){*/
 @media all and (orientation: portrait) {
-  /* line 366, demo.scss */
+  /* line 405, demo.scss */
   #main {
     /*Gallery*/
     /*---end---*/
     /*Home page*/
     /*---end---*/
   }
-  /* line 369, demo.scss */
+  /* line 408, demo.scss */
   #main .gallery .thumbnail-list {
     padding: 2%;
   }
-  /* line 371, demo.scss */
+  /* line 410, demo.scss */
   #main .gallery .thumbnail-list .rows {
     width: 100%;
     margin-bottom: 2%;
   }
-  /* line 374, demo.scss */
+  /* line 413, demo.scss */
   #main .gallery .thumbnail-list .rows .item {
     width: 48.7%;
     float: left;
   }
-  /* line 377, demo.scss */
+  /* line 416, demo.scss */
   #main .gallery .thumbnail-list .rows .item img {
     width: 100%;
     height: 14vh;
   }
-  /* line 387, demo.scss */
+  /* line 426, demo.scss */
   #main .top-banner {
     background-color: #ec3a38;
     height: 11.6vh;
   }
-  /* line 391, demo.scss */
+  /* line 430, demo.scss */
   #main .grid-icon {
     top: 1em;
     right: 1em;
   }
-  /* line 394, demo.scss */
+  /* line 433, demo.scss */
   #main .grid-icon img {
     width: 60%;
   }
-  /* line 399, demo.scss */
+  /* line 438, demo.scss */
   #main .top-effect img {
     width: 40%;
     float: left;
   }
-  /* line 407, demo.scss */
+  /* line 446, demo.scss */
   #main .home .top-effect img {
     width: 40%;
     float: left;
   }
-  /* line 412, demo.scss */
+  /* line 451, demo.scss */
   #main .home .action-group {
     margin-top: 23% !important;
   }
-  /* line 415, demo.scss */
+  /* line 454, demo.scss */
   #main .home .bottom-effect {
     margin-top: 6.7%;
   }
-  /* line 417, demo.scss */
+  /* line 456, demo.scss */
   #main .home .bottom-effect img {
     width: 47% !important;
   }
-  /* line 423, demo.scss */
+  /* line 462, demo.scss */
   #main .bottom-effect {
     display: block;
     text-align: right;
   }
-  /* line 426, demo.scss */
+  /* line 465, demo.scss */
   #main .bottom-effect img {
     width: 48% !important;
     margin-right: 0 !important;
   }
-  /* line 431, demo.scss */
+  /* line 470, demo.scss */
   #main .slick-slider {
     width: 100%;
     height: 100%;
@@ -515,48 +559,48 @@ body {
     /*Categories list*/
     /*---end---*/
   }
-  /* line 434, demo.scss */
+  /* line 473, demo.scss */
   #main .slick-slider .action-group {
     margin-top: 5.9em;
   }
-  /* line 438, demo.scss */
+  /* line 477, demo.scss */
   #main .slick-slider .back-icon img {
     width: 50%;
     margin-left: 1.2em;
     margin-top: 0.9em;
   }
-  /* line 444, demo.scss */
+  /* line 483, demo.scss */
   #main .slick-slider .instruction-slide {
     margin-top: 7.3em;
   }
-  /* line 446, demo.scss */
+  /* line 485, demo.scss */
   #main .slick-slider .instruction-slide img {
     width: 77%;
     margin-right: 8%;
   }
-  /* line 451, demo.scss */
+  /* line 490, demo.scss */
   #main .slick-slider .instruction-text {
     display: block;
     padding: 1em;
     background-color: #d5d6d7;
   }
-  /* line 455, demo.scss */
+  /* line 494, demo.scss */
   #main .slick-slider .instruction-text .title {
     font-weight: bold;
     font-size: 14pt;
   }
-  /* line 461, demo.scss */
+  /* line 500, demo.scss */
   #main .slick-slider .doodles-slider {
     margin: 28.3% 0;
     background-color: white;
     padding: 4.5%;
   }
-  /* line 465, demo.scss */
+  /* line 504, demo.scss */
   #main .slick-slider .doodles-slider img {
     width: 100%;
     height: 29%;
   }
-  /* line 469, demo.scss */
+  /* line 508, demo.scss */
   #main .slick-slider .doodles-slider .slick-prev {
     background: url("./../../public/images/prev-slider-icon.png") no-repeat;
     background-size: 96% 100%;
@@ -564,7 +608,7 @@ body {
     height: 28px;
     left: 3%;
   }
-  /* line 476, demo.scss */
+  /* line 515, demo.scss */
   #main .slick-slider .doodles-slider .slick-next {
     background: url("./../../public/images/next-slider-icon.png") no-repeat;
     background-size: 96% 100%;
@@ -572,68 +616,111 @@ body {
     height: 28px;
     right: 3%;
   }
-  /* line 485, demo.scss */
+  /* line 524, demo.scss */
   #main .slick-slider .btn-red {
     font-size: 13pt;
     padding: 2.2% 2%;
     margin: 6% 10%;
   }
-  /* line 490, demo.scss */
+  /* line 529, demo.scss */
   #main .slick-slider .btn-gallery {
     font-size: 13pt;
     padding: 3.2% 3%;
     margin: 5% 10%;
   }
-  /* line 495, demo.scss */
+  /* line 534, demo.scss */
   #main .slick-slider .btn-submit {
     font-size: 13pt;
     padding: 3.2% 2%;
     margin: 6% 10%;
   }
-  /* line 500, demo.scss */
+  /* line 539, demo.scss */
   #main .slick-slider .btn-add-magic {
     font-size: 13pt;
     padding: 3.2% 2%;
     margin: 5.9% 10%;
   }
-  /* line 505, demo.scss */
+  /* line 544, demo.scss */
   #main .slick-slider .btn-view-gallery {
     font-size: 13pt;
     padding: 3.2% 2%;
     margin: 5% 10%;
   }
-  /* line 510, demo.scss */
+  /* line 549, demo.scss */
   #main .slick-slider .bold {
     font-weight: bold;
   }
-  /* line 514, demo.scss */
+  /* line 553, demo.scss */
   #main .slick-slider .categories-list {
     margin-top: 20%;
   }
-  /* line 516, demo.scss */
+  /* line 555, demo.scss */
   #main .slick-slider .categories-list .group-1, #main .slick-slider .categories-list .group-2 {
     padding: 0.2em 0.5em;
   }
-  /* line 518, demo.scss */
+  /* line 557, demo.scss */
   #main .slick-slider .categories-list .group-1 .item, #main .slick-slider .categories-list .group-2 .item {
     width: 48.7%;
   }
-  /* line 520, demo.scss */
+  /* line 559, demo.scss */
   #main .slick-slider .categories-list .group-1 .item .age, #main .slick-slider .categories-list .group-2 .item .age {
     height: 1.9em;
     padding: 0.2em 0;
   }
-  /* line 523, demo.scss */
+  /* line 562, demo.scss */
   #main .slick-slider .categories-list .group-1 .item .age .ages, #main .slick-slider .categories-list .group-2 .item .age .ages {
     margin-left: 0.2em;
   }
-  /* line 526, demo.scss */
+  /* line 565, demo.scss */
   #main .slick-slider .categories-list .group-1 .item .age .quantity, #main .slick-slider .categories-list .group-2 .item .age .quantity {
     margin-right: 0.4em;
   }
 
+  /*Add magic*/
+  /* line 578, demo.scss */
+  .add-magic .back-icon img {
+    width: 52% !important;
+    margin-left: 1.2em;
+    margin-top: 1.1em !important;
+  }
+  /* line 584, demo.scss */
+  .add-magic .canvas-wrapper {
+    margin: 30% 0;
+    background-color: white;
+    padding: 4.5%;
+  }
+  /* line 588, demo.scss */
+  .add-magic .canvas-wrapper img {
+    width: 100%;
+    height: 65%;
+  }
+  /* line 593, demo.scss */
+  .add-magic .record {
+    text-align: center;
+  }
+  /* line 595, demo.scss */
+  .add-magic .record img {
+    width: 16%;
+  }
+  /* line 599, demo.scss */
+  .add-magic .grid-icon {
+    right: 0 !important;
+  }
+  /* line 601, demo.scss */
+  .add-magic .grid-icon .text-transform {
+    display: inline;
+    width: 35% !important;
+  }
+  /* line 605, demo.scss */
+  .add-magic .grid-icon .voice-recog {
+    display: inline;
+    width: 21% !important;
+    margin-left: 2em;
+  }
+
+  /*---end---*/
   /*Splash page*/
-  /* line 537, demo.scss */
+  /* line 614, demo.scss */
   img.splash-image {
     width: 60%;
     height: 60%;

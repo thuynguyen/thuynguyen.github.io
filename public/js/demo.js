@@ -72,19 +72,19 @@ D4G.prototype.chooseGallery = function() {
   });
 }
 D4G.prototype.goHome = function() {
-  $(".gallery .home-icon").click(function(){
+  $(".gallery #home-gallery").click(function(){
     $(this).children().css("opacity", 0.8);
     document.location = "/home.html";
   });
 }
 D4G.prototype.goBack = function(){
-  $(".gallery .back-icon").on("click", function(){
+  $(".gallery #back-gallery-group").on("click", function(){
     $(this).children().css("opacity", 0.8);
     document.location = "/home1.html";
   });
 }
 D4G.prototype.viewThumb = function(){
-  $(".gallery .grid-icon").on("click", function(){
+  $(".gallery #grid-gallery").on("click", function(){
     $(this).children().css("opacity", 0.8);
     document.location = "/thumnail.html";
   });
