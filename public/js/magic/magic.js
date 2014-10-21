@@ -235,31 +235,32 @@
   
 
   magic.gameLoop = function(timestamp) {
-    for_x++;
-    //if (for_x > 300) {for_x = 0; return}
-    
-    if (startAnimateTime === undefined) {
-      startAnimateTime = timestamp
-    }
-
-    if ((timestamp - startAnimateTime) > 10000) {
-      lastDrawAnimateTime = undefined
-      startAnimateTime = undefined
-      for_x = 0
-      rawCanvasCtx.drawImage(bg, 0, 0, canvas.width, canvas.height)
-      return
-    }
-    
-    if (lastDrawAnimateTime === undefined || (timestamp - lastDrawAnimateTime) > frameTime) {
+    if (timestamp !== NaN || timestamp !== undefined) {
+      for_x++;
+      //if (for_x > 300) {for_x = 0; return}
       
-      rotateImage.update();
-      rotateImage.render();
-      lastDrawAnimateTime = timestamp
+      if (startAnimateTime === undefined) {
+        startAnimateTime = timestamp
+      }
+
+      if ((timestamp - startAnimateTime) > 10000) {
+        lastDrawAnimateTime = undefined
+        startAnimateTime = undefined
+        for_x = 0
+        rawCanvasCtx.drawImage(bg, 0, 0, canvas.width, canvas.height)
+        return
+      }
+      
+      if (lastDrawAnimateTime === undefined || (timestamp - lastDrawAnimateTime) > frameTime) {
+        
+        rotateImage.update();
+        rotateImage.render();
+        lastDrawAnimateTime = timestamp
+      }
     }
-    
     console.log("timestamp==== "+timestamp)
     window.requestAnimationFrame(magic.gameLoop);
-    if (timestamp === NaN || timestamp === undefined) return
+    
     
   }
   magic.sprite = function(options) {
@@ -291,8 +292,9 @@
         that.context.drawImage(bg, 0, 0, canvas.width, canvas.height)
         console.log("currentID in render===="+currentID)
         if (that.direction == top) {
-          that.context.drawImage(that.image, shuttleSprite[currentID].frame.x, shuttleSprite[currentID].frame.y, shuttleSprite[currentID].frame.w, shuttleSprite[currentID].frame.h, 
-                                50, 300-currentID*10, shuttleSprite[currentID].frame.w, shuttleSprite[currentID].frame.h); //
+          that.context.drawImage(that.image,
+            shuttleSprite[currentID].frame.x, shuttleSprite[currentID].frame.y, shuttleSprite[currentID].frame.w, shuttleSprite[currentID].frame.h, 
+              50, canvas.height-for_x, shuttleSprite[currentID].frame.w, shuttleSprite[currentID].frame.h); //
         } else if (that.direction == left) {
             for (var i = 0; i < that.spriteSize; i++) {
               if (currentID == parseInt(fanSprite[i].filename)) {
