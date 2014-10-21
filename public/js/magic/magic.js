@@ -237,7 +237,7 @@
   magic.gameLoop = function(timestamp) {
     for_x++;
     //if (for_x > 300) {for_x = 0; return}
-   
+    
     if (startAnimateTime === undefined) {
       startAnimateTime = timestamp
     }
@@ -259,7 +259,7 @@
     
     console.log("timestamp==== "+timestamp)
     window.requestAnimationFrame(magic.gameLoop);
-    
+    if (timestamp === NaN || timestamp === undefined) return
     
   }
   magic.sprite = function(options) {
