@@ -14,17 +14,17 @@
     $('#_addAnimation').addClass("disabled")
     $('#_addRightAnimation').addClass("disabled")
     $('#_addBottomTopAnimation').addClass("disabled")
-    magic.startRecordInWorker("public/images/magic/train.png", "Left")})
+    magic.startRecordInWorker("", "fan")})
   $('#_addRightAnimation').click(function() {
     $('#_addAnimation').addClass("disabled")
     $('#_addLeftAnimation').addClass("disabled")
     $('#_addBottomTopAnimation').addClass("disabled")
-    magic.startRecordInWorker("public/images/magic/train.png", "Right")})
+    magic.startRecordInWorker("", "train")})
   $('#_addBottomTopAnimation').click(function() {
     $('#_addAnimation').addClass("disabled")
     $('#_addLeftAnimation').addClass("disabled")
     $('#_addRightAnimation').addClass("disabled")
-    magic.startRecordInWorker("img/space_ship.png", "Top")})
+    magic.startRecordInWorker("", "shuttle")})
     
 
 
@@ -34,7 +34,7 @@
   // Init for text magic
   textMagic.init({canvasId: 'playground',
                 finished: function() { console.log('Done')},
-                background: 'public/images/magic/sample_doodle.png',
+                background: 'public/images/doodle.gif',
                 text: 'Google'
   })
   $("#addTextMagic").click(textMagic.startTransform)

@@ -18,9 +18,10 @@
   var i = 1;
   var imgObj = null
   var rotateImage = null
-  var left = "Left"
-  var right = "Right"
-  var top = "Top"
+  var dove = "dove"
+  var train = "train"
+  var shuttle = "shuttle"
+  var fan = "fan"
   var sprW = 60;
   var sprH = 60;
   var currentID = 0;
@@ -109,7 +110,7 @@
       image: img,
       numberOfFrames: 40,
       ticksPerFrame: 4,
-      direction: right,
+      direction: dove,
       spriteSize: doveSprite.length,
       bg: bg
     });
@@ -131,7 +132,7 @@
       image: img,
       numberOfFrames: 40,
       ticksPerFrame: 4,
-      direction: "",
+      direction: train,
       spriteSize: shuttleSprite.length,
       bg: bg
     });
@@ -153,7 +154,7 @@
       image: img,
       numberOfFrames: 40,
       ticksPerFrame: 4,
-      direction: top,
+      direction: shuttle,
       spriteSize: shuttleSprite.length,
       bg: bg
     });
@@ -173,7 +174,7 @@
       image: img,
       numberOfFrames: 10,
       ticksPerFrame: 4,
-      direction: left,
+      direction: fan,
       spriteSize: fanSprite.length,
       bg: bg
     });
@@ -187,14 +188,17 @@
 
   magic.addAnimation = function(src_img, direction) {
     switch (direction) {
-        case left:
+        case fan:
           magic.addFan()
           break;
-        case right:
+        case train:
           magic.addTrain()
           break;
-        case top:
+        case shuttle:
           magic.addShuttle()
+          break;
+        case dove:
+          magic.addDove()
           break;
         default:
           magic.addDove()
@@ -246,8 +250,15 @@
       if (startAnimateTime === undefined) {
         startAnimateTime = timestamp
       }
+      var is_stop = false;
+      if (currentDirection == dove)
+        is_stop = (for_x == canvas.width+100)
+      else if (currentDirection == train)
+        is_stop = (canvas.width < for_x*3)
+      else if (currentDirection == shuttle)
+        is_stop = ((canvas.height+250)==for_x)
 
-      if ((timestamp - startAnimateTime) > 10000) {
+      if ((timestamp - startAnimateTime) > 10000 || is_stop) {
         lastDrawAnimateTime = undefined
         startAnimateTime = undefined
         for_x = 0
@@ -301,11 +312,12 @@
         that.context.clearRect(0,0, canvas.width, canvas.height);
         that.context.drawImage(bg, 0, 0, canvas.width, canvas.height)
         console.log("currentID in render===="+currentID)
-        if (that.direction == top) {
+        currentDirection = that.direction
+        if (that.direction == shuttle) {
           that.context.drawImage(that.image,
             shuttleSprite[currentID].frame.x, shuttleSprite[currentID].frame.y, shuttleSprite[currentID].frame.w, shuttleSprite[currentID].frame.h,
               50, canvas.height-for_x, shuttleSprite[currentID].frame.w, shuttleSprite[currentID].frame.h); //
-        } else if (that.direction == left) {
+        } else if (that.direction == fan) {
             for (var i = 0; i < that.spriteSize; i++) {
               if (currentID == parseInt(fanSprite[i].filename)) {
                 console.log("------order----"+fanSprite[i].filename)
@@ -313,7 +325,7 @@
                                   canvas.width/2-200,0, fanSprite[currentID].frame.w, fanSprite[currentID].frame.h);
               }
             }
-        } else if (that.direction == right) {
+        } else if (that.direction == dove) {
           that.context.drawImage(that.image, doveSprite[currentID].frame.x, doveSprite[currentID].frame.y, doveSprite[currentID].frame.w, doveSprite[currentID].frame.h,
                             canvas.width-for_x, 20, doveSprite[currentID].frame.w, doveSprite[currentID].frame.h);
         } else {
