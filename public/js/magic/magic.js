@@ -31,6 +31,7 @@
   var bg = null;
   var currentDirection = "";
   var for_x = 1;
+  var container = null;
   magic.loadCanvas = function(canvasId) {
     canvas = document.getElementById(canvasId)
     rawCanvasCtx = canvas.getContext('2d')
@@ -54,6 +55,9 @@
       //rawCanvasCtx.canvas.width  = window.innerWidth-35;
       // rawCanvasCtx.canvas.height = window.innerHeight;
     }
+    container = $(canvas).parent().parent();
+    canvas.width =  $(container).width()  //max width
+    canvas.height = $(container).height()  //max height
   }
   magic.loadImageFile = function(evt) {
     var tgt = evt.target || window.event.srcElement, files = tgt.files
@@ -317,7 +321,6 @@
   }
 
   magic.respondCanvas = function(){
-    var container = $(canvas).parent().parent();
     canvas.width =  $(container).width()  //max width
     canvas.height = $(container).height()  //max height
     //Call a function to redraw other content (texts, images etc)
