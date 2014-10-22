@@ -266,10 +266,6 @@
         // for voice button
         $("#voice-icon").show();
         $("#voice-icon-disabled").hide();
-        $('#_addAnimation').removeClass("disabled")
-        $('#_addLeftAnimation').removeClass("disabled")
-        $('#_addRightAnimation').removeClass("disabled")
-        $('#_addBottomTopAnimation').removeClass("disabled")
         return
       }
 

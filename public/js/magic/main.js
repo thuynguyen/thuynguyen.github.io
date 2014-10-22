@@ -4,29 +4,18 @@
   magic.loadBg()
   $('#image4doodle').change(magic.loadImageFile)
   //$('#addAnimation').click(magic.addAnimation)
-  $('#_addAnimation').click(function() {
-    $('#_addLeftAnimation').addClass("disabled")
-    $('#_addRightAnimation').addClass("disabled")
-    $('#_addBottomTopAnimation').addClass("disabled")
-  	magic.startRecordInWorker()
-  })
-  $('#_addLeftAnimation').click(function() {
-    $('#_addAnimation').addClass("disabled")
-    $('#_addRightAnimation').addClass("disabled")
-    $('#_addBottomTopAnimation').addClass("disabled")
-    magic.startRecordInWorker("", "fan")})
-  $('#_addRightAnimation').click(function() {
-    $('#_addAnimation').addClass("disabled")
-    $('#_addLeftAnimation').addClass("disabled")
-    $('#_addBottomTopAnimation').addClass("disabled")
-    magic.startRecordInWorker("", "train")})
-  $('#_addBottomTopAnimation').click(function() {
-    $('#_addAnimation').addClass("disabled")
-    $('#_addLeftAnimation').addClass("disabled")
-    $('#_addRightAnimation').addClass("disabled")
-    magic.startRecordInWorker("", "shuttle")})
-    
-
+  // $('#_addAnimation').click(function() {
+  // 	magic.startRecordInWorker()
+  // })
+  // $('#_addLeftAnimation').click(function
+  //   magic.startRecordInWorker("", "fan")
+  // })
+  // $('#_addRightAnimation').click(function
+  //   magic.startRecordInWorker("", "train")
+  // })
+  // $('#_addBottomTopAnimation').click(function
+  //   magic.startRecordInWorker("", "shuttle")
+  // })
 
   //$('#startRecord').click(magic.startStopRecord)
   $('#preview').click(magic.preview)
