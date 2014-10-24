@@ -10,10 +10,10 @@
   $('#_addLeftAnimation').click(function(){
     magic.startRecordInWorker("", "fan")
   })
-  $('#_addRightAnimation').click(function
+  $('#_addRightAnimation').click(function(){
     magic.startRecordInWorker("", "train")
   })
-  $('#_addBottomTopAnimation').click(function
+  $('#_addBottomTopAnimation').click(function(){
     magic.startRecordInWorker("", "shuttle")
   })
 
