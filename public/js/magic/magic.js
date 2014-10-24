@@ -117,7 +117,7 @@
 
   // Load sprite sheet
     img.onload = function() {
-      magic.gameLoop()
+      window.requestAnimationFrame(magic.gameLoop)
     }
     img.src = "public/images/magic/dove.png";
   }
@@ -139,7 +139,7 @@
 
   // Load sprite sheet
     img.onload = function() {
-      magic.gameLoop()
+      window.requestAnimationFrame(magic.gameLoop)
     }
     img.src = "public/images/magic/train.png";
   }
@@ -161,7 +161,7 @@
 
   // Load sprite sheet
     img.onload = function() {
-      magic.gameLoop()
+      window.requestAnimationFrame(magic.gameLoop)
     }
     img.src = "public/images/magic/shuttle.png";
   }
@@ -181,7 +181,7 @@
 
   // Load sprite sheet
     img.onload = function() {
-      magic.gameLoop()
+      window.requestAnimationFrame(magic.gameLoop)
     }
     img.src =  "public/images/magic/fan.png"
   }
