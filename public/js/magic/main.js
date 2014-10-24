@@ -3,6 +3,19 @@
   magic.loadCanvas('playground')
   magic.loadBg()
   $('#image4doodle').change(magic.loadImageFile)
+  //$('#addAnimation').click(magic.addAnimation)
+  $('#_addAnimation').click(function() {
+  	magic.startRecordInWorker()
+  })
+  $('#_addLeftAnimation').click(function
+    magic.startRecordInWorker("", "fan")
+  })
+  $('#_addRightAnimation').click(function
+    magic.startRecordInWorker("", "train")
+  })
+  $('#_addBottomTopAnimation').click(function
+    magic.startRecordInWorker("", "shuttle")
+  })
 
   //$('#startRecord').click(magic.startStopRecord)
   $('#preview').click(magic.preview)
