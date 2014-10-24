@@ -5,15 +5,19 @@
   $('#image4doodle').change(magic.loadImageFile)
   //$('#addAnimation').click(magic.addAnimation)
   $('#_addAnimation').click(function() {
-  	magic.startRecordInWorker()
+  	magic.disabledButton()
+    magic.startRecordInWorker()
   })
   $('#_addLeftAnimation').click(function(){
+    magic.disabledButton()
     magic.startRecordInWorker("", "fan")
   })
   $('#_addRightAnimation').click(function(){
+    magic.disabledButton()
     magic.startRecordInWorker("", "train")
   })
   $('#_addBottomTopAnimation').click(function(){
+    magic.disabledButton()
     magic.startRecordInWorker("", "shuttle")
   })
 

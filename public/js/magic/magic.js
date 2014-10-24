@@ -264,6 +264,7 @@
         for_x = 0
         rawCanvasCtx.drawImage(bg, 0, 0, canvas.width, canvas.height)
         // for voice button
+        magic.enabledButton()
         $("#voice-icon").show();
         $("#voice-icon-disabled").hide();
         return
@@ -340,6 +341,20 @@
     //Call a function to redraw other content (texts, images etc)
     bg.src = bg.src
     canvas.getContext("2d").drawImage(bg, 0, 0, canvas.width, canvas.height)
+  }
+
+  magic.disabledButton = function() {
+    $('#_addAnimation').addClass("disabled")
+    $('#_addLeftAnimation').addClass("disabled")
+    $('#_addRightAnimation').addClass("disabled")
+    $('#_addBottomTopAnimation').addClass("disabled")
+  }
+
+  magic.enabledButton = function() {
+    $('#_addAnimation').removeClass("disabled")
+    $('#_addLeftAnimation').removeClass("disabled")
+    $('#_addRightAnimation').removeClass("disabled")
+    $('#_addBottomTopAnimation').removeClass("disabled")
   }
 
   magic.canvas = function() {
