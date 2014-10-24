@@ -7,7 +7,7 @@
   $('#_addAnimation').click(function() {
   	magic.startRecordInWorker()
   })
-  $('#_addLeftAnimation').click(function
+  $('#_addLeftAnimation').click(function(){
     magic.startRecordInWorker("", "fan")
   })
   $('#_addRightAnimation').click(function
